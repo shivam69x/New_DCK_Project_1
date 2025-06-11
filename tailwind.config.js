@@ -13,7 +13,7 @@ export default {
         },
       },
       animation: {
-        'gentle-bounce': 'gentle-bounce 2s infinite',
+        'gentle-bounce': 'gentle-bounce 3s infinite',
         'spin-slow': 'spin 5s linear infinite',
       },
 

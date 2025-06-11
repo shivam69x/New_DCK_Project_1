@@ -40,11 +40,13 @@ export default function FAQsection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // <div class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
+
   return (
-    <section className="py-12 border border-slate-300 bg-white rounded-2xl mt-16">
+    <section id="faq" className="max-w-[1150px] flex justify-center m-auto py-12 border border-slate-300 bg-white rounded-2xl mt-16 [background:radial-gradient(140%_115%_at_50%_10%,#fff_30%,#63e_110%)]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <h2 className="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
+          <h2 className="text-3xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
             Frequently asked questions
           </h2>
         </div>
@@ -60,7 +62,7 @@ export default function FAQsection() {
                 }`}
               >
                 <button
-                  className={`accordion-toggle group inline-flex items-center justify-between text-left text-xl font-semibold leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 ${
+                  className={`accordion-toggle group inline-flex items-center justify-between text-left text-lg font-semibold leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 ${
                     isOpen ? "font-medium text-indigo-600" : ""
                   }`}
                   onClick={() => toggleAccordion(index)}

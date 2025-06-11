@@ -6,7 +6,7 @@ const Aim = () => {
   return (
     // Left side
 
-    <div className=" flex items-center justify-center px-8 py-10 border border-slate-300 bg-white rounded-2xl mt-7 bg-gradient-to-b from-sky-100 shadow-md">
+    <div className="flex justify-center m-auto max-w-[1100px]  items-center  px-8 py-10 border border-slate-300 bg-white rounded-2xl mt-4 bg-gradient-to-b from-sky-100 shadow-md">
       <div className=" ">
         <div className="">
           <div className="">
@@ -16,10 +16,10 @@ const Aim = () => {
                   <Target className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-950 mb-3">
+                  <h3 className="text-xl font-bold text-gray-950 mb-3">
                     Our Mission: Helping Your Business Succeed Online
                   </h3>
-                  <p className="text-gray-700 text-xl font-normal">
+                  <p className="text-gray-700 text-sm font-normal">
                     While working with us we make sure your business has
                     everything it needs to succeed online. We take the time to
                     understand your needs then deliver solutions that fit your
@@ -32,10 +32,10 @@ const Aim = () => {
                   <Eye className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     Our Vision
                   </h3>
-                  <p className="text-gray-700 text-xl font-normal">
+                  <p className="text-gray-700 text-sm font-normal">
                     is to ensure uninterrupted, authentic and secure digital
                     operations for businesses worldwide. We endeavor to set new
                     standards in service excellence through innovative

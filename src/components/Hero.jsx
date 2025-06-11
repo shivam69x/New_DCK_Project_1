@@ -1,53 +1,120 @@
-import React from "react";
-import Himage from "../assets/4.png";
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Hero10 from "../assets/hero10.png";
+import Hero20 from "../assets/hero20.png";
+import Hero30 from "../assets/hero30.png";
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      heading: "Fast, secure and reliable web hosting",
+      paragraph:
+        "Elevate your business with cutting-edge web solutions that drive growth, enhance user experience, and deliver measurable results in today's competitive digital landscape.",
+      image: Hero10,
+    },
+    {
+      id: 2,
+      heading: "Innovative Cloud Solutions",
+      paragraph:
+        "Scale your infrastructure with enterprise-grade cloud services designed for modern businesses. Experience unmatched reliability, security, and performance optimization.",
+      image: Hero20,
+    },
+    {
+      id: 3,
+      heading: "Data-Driven Success",
+      paragraph:
+        "Unlock the power of analytics and artificial intelligence to make informed decisions, optimize operations, and stay ahead of market trends with our advanced platform.",
+      image: Hero30,
+    },
+  ];
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // 👈 5 seconds
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const goToPrevious = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
   return (
-    <div className="">
-      <section className="py-12 bg-white sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <div className="relative">
-            <div className="lg:w-2/3">
-              <h1 className="mt-6 text-1xl font-normal text-white sm:mt-10 sm:text-5xl lg:text-6xl xl:text-8xl">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">
-                  Fast, secure and reliable web hosting
-                </span>{" "}
-              </h1>
-              <p className="max-w-lg mt-4 text-xl font-normal text-gray-400 sm:mt-8">
-                At DC Keepers, we redefine the way businesses power their
-                digital presence. Whether you are just starting out, scaling up
-                or already a well-established company, we have got the expertise
-                to deliver solutions designed just for you.
-              </p>
-              <div className="relative inline-flex items-center justify-center mt-8 sm:mt-12 group">
-                <div className="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
-                <a
-                  href="#"
-                  title=""
-                  className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full"
-                  role="button"
-                >
-                  {" "}
-                  Start Exploring Inspiration{" "}
-                </a>
+    <section id="home" className="relative bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] h-[60vh] min-h-[500px] overflow-hidden">
+      <div className="container mx-auto px-6 h-full relative">
+        {/* Carousel Container */}
+        <div className="relative w-full h-full flex items-center">
+          <div className="w-full h-full flex items-center">
+            {slides.map((slide, index) => (
+              <div
+                key={slide.id}
+                className={`absolute inset-0 w-full h-full transition-all duration-700 ease-in-out transform ${
+                  index === currentSlide
+                    ? "translate-x-0 opacity-100"
+                    : index < currentSlide
+                    ? "-translate-x-full opacity-0"
+                    : "translate-x-full opacity-0"
+                }`}
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 h-full items-center">
+                  {/* Left Side - Text Content */}
+                  <div className="flex flex-col justify-center space-y-7 order-1 lg:order-1">
+                    <h1 className="text-lg lg:text-2xl xl:text-4xl  font-bold leading-tight text-[#0a2540]">
+                      {slide.heading}
+                    </h1>
+                    <p className="text-sm lg:text-lg leading-relaxed text-[#3b3f5c] max-w-lg">
+                      {slide.paragraph}
+                    </p>
+                  </div>
+
+                  {/* Right Side - Image */}
+                  <div className="flex justify-center lg:justify-end items-center order-2 lg:order-2 ">
+                    <div className="w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] ">
+                      <img
+                        src={slide.image}
+                        alt={`Slide ${slide.id}`}
+                        className="max-w-3xl h-auto object-cover lg:pl-6 xl:pl-44"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="mt-8 md:absolute md:mt-0 md:top-32 lg:top-0 ml-[940px] animate-gentle-bounce z-50">
-              <img src={Himage} alt="" />
-            </div>
-
-            <div className="relative  inline-block">
-              {/* Spinning Yellow Cube */}
-              <div className="absolute -top-[860px] left-[1260px]">
-                <button className="animate-spin-slow w-32 h-32 bg-yellow-400/40 rounded-3xl"></button>
-              </div>
-            </div>
-
+            ))}
           </div>
         </div>
-      </section>
-    </div>
+
+        {/* Navigation Controls */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
+          {/* Arrow Navigation */}
+          <div className="flex space-x-2 ml-6 ">
+            <button
+              onClick={goToPrevious}
+              className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-[#94a3b2] "
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-[#94a3b2] "
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
+
 export default Hero;

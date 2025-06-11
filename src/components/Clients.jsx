@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-// import "./TestimonialSlider.css"; // custom styles
+import ClintImg from "../assets/clint2.jpg"
 
 const testimonials = [
   {
@@ -45,10 +45,13 @@ const testimonials = [
 
 export default function Clients() {
   return (
-    <section className="py-16 border rounded-xl border-gray-300 mt-20 bg-white bg-gradient-to-t from-sky-800/30 shadow-md">
+    <div className="h-[700px] bg-cover bg-center bg-no-repeat border  rounded-t-xl"
+
+     style={{ backgroundImage: `url(${ClintImg})` }}>
+      <section className="py-12  -mt-0">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <h2 className="text-4xl text-center font-bold text-gray-900">
+          <h2 className="text-3xl text-center font-bold text-gray-200">
             What our happy user says!
           </h2>
         </div>
@@ -109,5 +112,6 @@ export default function Clients() {
         </Swiper>
       </div>
     </section>
+    </div>
   );
 }

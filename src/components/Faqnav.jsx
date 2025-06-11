@@ -1,25 +1,33 @@
 import React from "react";
 import { ChevronUp } from "lucide-react";
 
+
 export default function Faqnav() {
   
   const navItems = [
-    "Benefits",
-    "Plans and Pricing",
-    "Offers",
-    "Why DC keepers?",
-    "FAQ",
+    { name: "Home", targetId: "home" },
+    { name: "Offers", targetId: "offers" },
+    { name: "Why DC keepers?", targetId: "whyDCkeepers" },
+    { name: "FAQ", targetId: "faq" },
   ];
 
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   return (
-    <div className=" bg-white py-2 border-b-0 border-t-2 mb-5 sticky z-40 top-16 bg-white/30 backdrop-blur-md shadow-md" >
+    <div className=" bg-white py-2  sticky z-50 top-11 bg-white/30 backdrop-blur-md shadow-md flex items-center h-10" >
       {/* Sticky Navigation Bar */}
       <div className=" transition-all duration-300 ease-in-out  ">
-        <div className="container ml-20 mr-5 pr-[500px] right-8 sticky z-40">
-          <div className="bg-gray-300 rounded-full py-2 px-5 flex items-center overflow-x-auto ">
+        <div className="container px-20 sm:pr-0 md:pr-6 lg:pr-96 sticky z-40">
+          <div className="bg-gray-300 rounded-full py-[3px] px-5 flex items-center overflow-x-auto ">
+
             {/* Upward Arrow Icon */}
-            <div className="flex-shrink-0 mr-4">
-              <ChevronUp className="w-5 h-5 text-gray-700" />
+            <div className="flex-shrink-0 mr-3">
+              <ChevronUp className="w-5 text-gray-800" />
             </div>
 
             {/* Navigation Items */}
@@ -27,9 +35,10 @@ export default function Faqnav() {
               {navItems.map((item, index) => (
                 <button
                   key={index}
-                  className="text-gray-900 font-medium text-sm hover:text-gray-700 transition-colors duration-200 px-2 py-1"
+                  onClick={() => handleScroll(item.targetId)}
+                  className="text-gray-900 font-medium text-[15px] hover:text-gray-700 transition-colors duration-200 px-2 py-1"
                 >
-                  {item}
+                  {item.name}
                 </button>
               ))}
             </div>

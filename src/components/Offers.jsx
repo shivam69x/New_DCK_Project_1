@@ -34,7 +34,7 @@ export default function Offers() {
     },
     {
       name: "Cloud VPS",
-      subtitle: "Best for entrepreneurs",
+      subtitle: "Best for Entrepreneurs",
       price: "17",
       features: [
         "2 CPU Cores",
@@ -66,15 +66,15 @@ export default function Offers() {
   ];
 
   return (
-    <div className="min-h-screen bg-white-to-br from-orange-100 via-orange-50 to-orange-200 mt-10">
-      {/* Navigation */}
+    <div  id="offers" className="max-w-full min-h-screen bg-white-to-br from-orange-100 via-orange-50 to-orange-200 mt-10">
+
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-[1500px] mx-auto py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
             Most Popular Hosting Plans
           </h1>
-          <h2 className="text-gray-800 mb-8">
+          <h2 className="text-gray-800 mb-14 text-base">
             Cheap Dedicated Server Hosting provider in India
           </h2>
 
@@ -95,11 +95,11 @@ export default function Offers() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[1200px]">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-lg shadow-lg p-6 ${
+              className={`relative bg-white rounded-lg shadow-lg px-3 py-5 ${
                 plan.bestValue
                   ? "ring-4 ring-green-500 transform scale-105"
                   : ""
@@ -113,11 +113,11 @@ export default function Offers() {
                 </div>
               )}
 
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-1">
+              <div className="text-center mb-6 px-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-1">
                   {plan.name}
                 </h3>
-                <p className="text-sm text-gray-600 mb-4">{plan.subtitle}</p>
+                <p className="text-xs text-gray-600 mb-4">{plan.subtitle}</p>
 
                 <div className="mb-4">
                   <span className="text-3xl font-bold text-gray-800">
@@ -127,9 +127,9 @@ export default function Offers() {
                 </div>
 
                 <button
-                  className={`w-full py-3 px-4 rounded-lg font-medium transition-transform duration-300 ease-in-out transform ${
+                  className={`w-full py-3 rounded-md font-medium text-sm transition-transform duration-300 ease-in-out transform ${
                     plan.buttonStyle === "primary"
-                      ? "bg-blue-600 text-white hover:bg-blue-700 hover:scale-105"
+                      ? "bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 "
                       : "border border-gray-300 text-gray-700 hover:bg-gray-50 hover:scale-105"
                   }`}
                 >
@@ -138,14 +138,14 @@ export default function Offers() {
               </div>
 
               <div>
-                <h4 className="font-bold text-lg text-gray-800 mb-3">
+                <h4 className="font-bold text-base text-gray-800 mb-3">
                   Key features
                 </h4>
                 <ul className="space-y-3 list-disc px-4">
                   {plan.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="text-sm font-semibold text-gray-800  cursor-pointer hover:text-gray-800"
+                      className="text-xs text-[16px] font-semibold text-gray-900  cursor-pointer hover:text-gray-700"
                     >
                       {feature}
                     </li>
@@ -153,15 +153,17 @@ export default function Offers() {
                 </ul>
               </div>
 
-              <button
-                className={`w-full mt-5 py-3 px-4 rounded-lg font-medium transition-transform duration-300 ease-in-out transform ${
+              <div className="px-4">
+                <button
+                className={`w-full mt-5 py-2 px-3 rounded-lg font-medium transition-transform duration-300 ease-in-out transform text-sm ${
                   plan.buttonStyle === "primary"
                     ? "border border-gray-800 text-black hover:scale-105"
-                    : "border border-gray-300 text-gray-700 hover:bg-gray-50 hover:scale-105"
+                    : "border border-gray-300 text-gray-900 hover:bg-gray-50 hover:scale-105"
                 }`}
               >
                 COMPARE PLANS
               </button>
+              </div>
             </div>
           ))}
         </div>

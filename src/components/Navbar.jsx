@@ -11,36 +11,17 @@ import AboutUs from "./Aboutus";
 import FAQsection from "./FAQsection";
 import Whyus from "./Whyus";
 import Clients from "./Clients";
-import DCKLogo from "../assets/DCK.png";
+// import DCKLogo from "../assets/DCK.png";
 import Aim from "./Aim";
-import Footer from "./Footer";
+// import Footer from "./Footer";
+import SecNav from "./SecNav";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("Domain");
-
-  const navigationLinks = [
-    { name: "Domain", href: "#domain", hasDropdown: true },
-    { name: "About", href: "#about", hasDropdown: true },
-    { name: "Website", href: "#website", hasDropdown: true },
-    { name: "Contact", href: "#Contact", hasDropdown: true },
-    { name: "Hosting", href: "#hosting", hasDropdown: true },
-    { name: "Tools", href: "#tools", hasDropdown: true },
-  ];
-
-  const rightNavItems = [
-    { name: "Plans & pricing", href: "#plans" },
-    { name: "Helpdesk", href: "#helpdesk" },
-    { name: "Resources", href: "#resources", hasDropdown: true },
-  ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleLinkClick = (linkName) => {
-    setActiveLink(linkName);
-    setIsOpen(false);
   };
 
   // Close mobile menu when clicking outside
@@ -56,39 +37,68 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className="bg-white">
+    <div className=" ">
       {/* Top Navigation Bar */}
       <nav className="navbar-container sticky top-0 z-40 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+        <div className="max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="flex justify-between items-center h-7">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <div className="flex items-center w-56 pt-2">
-                <img src={DCKLogo} alt="" />
-              </div>
-            </div>
 
             {/* Right Side - Desktop */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {rightNavItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <button
-                    onClick={() => handleLinkClick(item.name)}
-                    className="flex items-center text-gray-900 hover:text-gray-950 text-base font-medium transition-colors duration-200"
+            <div className="hidden lg:flex items-center space-x-[650px]">
+              <div className="relative group flex items-center gap-8">
+                <span className="flex items-center text-gray-900 hover:text-gray-950 text-xs font-medium transition-colors duration-200">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-4 relative right-2"
                   >
-                    {item.name}
-                    {item.hasDropdown && (
-                      <ChevronDown size={16} className="ml-1" />
-                    )}
-                  </button>
-                </div>
-              ))}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                    />
+                  </svg>
+                  info@dckeepers.com
+                </span>
 
-              {/* Login Button */}
-              <button className="flex items-center px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-full hover:bg-blue-50 transition-colors duration-200">
-                <User size={16} className="mr-2" />
-                Login
-              </button>
+                <span className="flex items-center text-gray-900 hover:text-gray-950 text-xs font-medium transition-colors duration-200">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-4 relative right-2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                    />
+                  </svg>
+                  +91 9119359554
+                </span>
+              </div>
+
+              {/* Login Button / signUp Button*/}
+
+              <div className="flex gap-3">
+                <Link to={"/login"}>
+                  <button className="flex items-center px-2  text-[14px] font-medium py-[2px] text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
+                    <User size={14} className="mr-2" />
+                    Login
+                  </button>
+                </Link>
+
+                <button className="flex items-center px-2  text-[14px] font-medium py-[2px]  text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
+                  <User size={14} className="mr-2" />
+                  Sign Up
+                </button>
+              </div>
 
               {/* Cart */}
               {/* <button className="relative p-2 text-gray-600 hover:text-gray-800 transition-colors duration-200">
@@ -119,17 +129,6 @@ const Navbar = () => {
           } overflow-hidden bg-white border-t border-gray-200`}
         >
           <div className="px-4 py-3 space-y-3">
-            {rightNavItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleLinkClick(item.name)}
-                className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-md transition-colors duration-200"
-              >
-                {item.name}
-                {item.hasDropdown && <ChevronDown size={16} />}
-              </button>
-            ))}
-
             <div className="border-t border-gray-200 pt-3 mt-3">
               <button className="flex items-center w-full px-3 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-full hover:bg-blue-50 transition-colors duration-200 justify-center">
                 <User size={16} className="mr-2" />
@@ -141,51 +140,7 @@ const Navbar = () => {
       </nav>
 
       {/* Secondary Navigation Bar */}
-      <nav className="bg-cyan-100 border-b border-cyan-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center h-16 overflow-x-auto">
-            <div className="hidden lg:flex items-center space-x-8 cursor-pointer">
-              {navigationLinks.map((link) => (
-                <div key={link.name} className="relative group">
-                  <button
-                    onClick={() => handleLinkClick(link.name)}
-                    className={`flex items-center  text-base font-medium transition-colors duration-200 whitespace-nowrap ${
-                      activeLink === link.name
-                        ? "text-gray-900 border-b-2 border-gray-950 pb-4"
-                        : "text-gray-900 hover:text-gray-950 pb-4"
-                    }`}
-                  >
-                    {link.name}
-                    {link.hasDropdown && (
-                      <ChevronDown size={16} className="ml-1" />
-                    )}
-                  </button>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile Secondary Nav */}
-            <div className="lg:hidden flex items-center space-x-6 overflow-x-auto">
-              {navigationLinks.map((link) => (
-                <button
-                  key={link.name}
-                  onClick={() => handleLinkClick(link.name)}
-                  className={`flex items-center text-sm font-medium transition-colors duration-200 whitespace-nowrap ${
-                    activeLink === link.name
-                      ? "text-gray-800 border-b-2 border-gray-800 pb-4"
-                      : "text-gray-600 hover:text-gray-800 pb-4"
-                  }`}
-                >
-                  {link.name}
-                  {link.hasDropdown && (
-                    <ChevronDown size={14} className="ml-1" />
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </nav>
+      <SecNav />
 
       {/* Demo Content */}
       <div className="bg-slate-200 min-h-screen">
@@ -245,7 +200,7 @@ const Navbar = () => {
 
         <DCK />
 
-        <div className="max-w-6xl mx-auto px-4 py-1 ">
+        <div className="max-w-[1200px] flex justify-center flex-col mx-auto px-0 py-1 ">
           <Midhero />
 
           <Offers />
@@ -259,11 +214,10 @@ const Navbar = () => {
           <Aim />
 
           <FAQsection />
-
-          <Clients />
         </div>
-        <div className="min-h-screen mt-32">
-          <Footer />
+        <div className="mt-20">
+          <Clients />
+          {/* <Footer /> */}
         </div>
       </div>
     </div>
