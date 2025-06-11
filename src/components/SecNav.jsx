@@ -22,6 +22,7 @@ const SecNav = () => {
     { name: "Google Workspace", hasDropdown: false },
     { name: "Microsoft 365", hasDropdown: false },
     { name: "License", hasDropdown: false },
+    { name: "About us", hasDropdown: false },
   ];
 
   // Dropdown content
@@ -55,14 +56,14 @@ const SecNav = () => {
                     onClick={() =>
                       item.hasDropdown ? toggleDropdown(item.name) : null
                     }
-                    className={`flex items-center space-x-1 px-3 py-2 text-xs font-medium text-gray-900 hover:text-cyan-600 hover:bg-cyan-50 rounded-md transition-colors duration-200 ${
+                    className={`uppercase flex items-center -space-x-3 px-3 py-2 text-[14px] font-medium text-gray-900 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 ${
                       item.hasDropdown ? "cursor-pointer" : "cursor-pointer"
                     }`}
                   >
                     <span>{item.name}</span>
                     {item.hasDropdown && (
                       <svg
-                        className={`w-4 h-4 transition-transform duration-200 ${
+                        className={`w-[18px] h-[18px] relative left-[18px] transition-transform duration-200 ${
                           activeDropdown === item.name ? "rotate-180" : ""
                         }`}
                         fill="none"
