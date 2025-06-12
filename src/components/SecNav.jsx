@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import DCKLogo from "../assets/DCK.png";
+
+import DCKNav from "../assets/DCK - Footer.png";
 
 const SecNav = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -38,13 +39,13 @@ const SecNav = () => {
   return (
     <>
       {/* Secondary Navigation Bar */}
-      <nav className="bg-cyan-100 border-b border-cyan-200  z-50 sticky top-0">
+      <nav className="bg-cyan-100 border-b border-cyan-200  z-40 sticky top-0 ">
         <div className="max-w-[2040px] mx-auto px-3 sm:px-5 lg:px-9">
           <div className="flex items-center h-11">
             {/* Logo  */}
             <div className="flex-shrink-0">
-              <div className="flex items-center w-40 pt-2 ">
-                <img className="" src={DCKLogo} alt="" />
+              <div className="flex items-center w-[180px] pt-2 ">
+                <img className="" src={DCKNav} alt="" />
               </div>
             </div>
 
@@ -56,7 +57,7 @@ const SecNav = () => {
                     onClick={() =>
                       item.hasDropdown ? toggleDropdown(item.name) : null
                     }
-                    className={`uppercase flex items-center -space-x-3 px-3 py-2 text-[14px] font-medium text-gray-900 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 ${
+                    className={` uppercase flex items-center -space-x-3 px-3 py-2 text-[14px] font-bold text-gray-900 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 ${
                       item.hasDropdown ? "cursor-pointer" : "cursor-pointer"
                     }`}
                   >

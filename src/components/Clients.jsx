@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import ClintImg from "../assets/clint2.jpg"
+// import ClintImg from "../assets/clint2.jpg"
+import ClintImg2 from "../assets/review10.png"
 
 const testimonials = [
   {
@@ -47,12 +48,12 @@ export default function Clients() {
   return (
     <div className="h-[700px] bg-cover bg-center bg-no-repeat border  rounded-t-xl"
 
-     style={{ backgroundImage: `url(${ClintImg})` }}>
-      <section className="py-12  -mt-0">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <h2 className="text-3xl text-center font-bold text-gray-200">
-            What our happy user says!
+     style={{ backgroundImage: `url(${ClintImg2})` }}>
+      <section className="py-5  -mt-0">
+      <div className="mx-auto max-w-7xl px-1 sm:px-1 lg:px-2">
+        <div className="mb-16 backdrop-blur-md shadow-md bg-slate-100/10 rounded-xl">
+          <h2 className="  py-2 text-2xl text-center font-bold text-teal-600">
+            What our happy user says
           </h2>
         </div>
 

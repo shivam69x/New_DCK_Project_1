@@ -43,7 +43,7 @@ export default function FAQsection() {
   // <div class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
 
   return (
-    <section id="faq" className="max-w-[1150px] flex justify-center m-auto py-12 border border-slate-300 bg-white rounded-2xl mt-16 [background:radial-gradient(140%_115%_at_50%_10%,#fff_30%,#63e_110%)]">
+    <section id="faq" className="max-w-[1150px] flex justify-center m-auto py-12 border border-slate-300 bg-white rounded-2xl mt-16 bg-gradient-to-t from-sky-200 shadow-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <h2 className="text-3xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">

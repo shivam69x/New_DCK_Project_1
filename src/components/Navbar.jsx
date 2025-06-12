@@ -11,11 +11,10 @@ import AboutUs from "./Aboutus";
 import FAQsection from "./FAQsection";
 import Whyus from "./Whyus";
 import Clients from "./Clients";
-// import DCKLogo from "../assets/DCK.png";
 import Aim from "./Aim";
-// import Footer from "./Footer";
 import SecNav from "./SecNav";
 import { Link, NavLink } from "react-router-dom";
+import NavCurrency from "./NavCurrency";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,13 +38,13 @@ const Navbar = () => {
   return (
     <div className=" ">
       {/* Top Navigation Bar */}
-      <nav className="navbar-container sticky top-0 z-40 bg-white border-b border-gray-200">
+      <nav className="navbar-container sticky top-0 z-30 bg-white border-b border-gray-200">
         <div className="max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-16">
-          <div className="flex justify-between items-center h-7">
+          <div className="flex justify-between items-center h-[40px]">
             {/* Logo */}
 
             {/* Right Side - Desktop */}
-            <div className="hidden lg:flex items-center space-x-[650px]">
+            <div className="hidden lg:flex items-center space-x-[50px]">
               <div className="relative group flex items-center gap-8">
                 <span className="flex items-center text-gray-900 hover:text-gray-950 text-xs font-medium transition-colors duration-200">
                   <svg
@@ -86,28 +85,21 @@ const Navbar = () => {
 
               {/* Login Button / signUp Button*/}
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 ">
+                <button className="flex items-center px-2  text-[16px] font-medium py-[2px]  text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
+                  <User size={14} className="mr-2" />
+                  Sign Up
+                </button>
+
                 <Link to={"/login"}>
-                  <button className="flex items-center px-2  text-[14px] font-medium py-[2px] text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
+                  <button className="flex items-center px-2  text-[16px] font-medium py-[2px] text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
                     <User size={14} className="mr-2" />
                     Login
                   </button>
                 </Link>
-
-                <button className="flex items-center px-2  text-[14px] font-medium py-[2px]  text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
-                  <User size={14} className="mr-2" />
-                  Sign Up
-                </button>
               </div>
-
-              {/* Cart */}
-              {/* <button className="relative p-2 text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                <ShoppingCart size={20} />
-                <span className="absolute -top-1 -right-1 bg-gray-800 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  0
-                </span>
-              </button> */}
             </div>
+            <div className="flex gap-3 justify-end relative z-50 "> <NavCurrency/> </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
@@ -195,9 +187,9 @@ const Navbar = () => {
             </div>
           </div> */}
         </div>
+
         <Hero />
         <Faqnav />
-
         <DCK />
 
         <div className="max-w-[1200px] flex justify-center flex-col mx-auto px-0 py-1 ">
@@ -217,7 +209,6 @@ const Navbar = () => {
         </div>
         <div className="mt-20">
           <Clients />
-          {/* <Footer /> */}
         </div>
       </div>
     </div>

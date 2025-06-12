@@ -1,220 +1,227 @@
 import React from "react";
+import DCKFoot from "../assets/DCK - Footer.png";
 import {
-  Phone,
   Mail,
-  MessageCircle,
+  Phone,
+  Server,
+  Monitor,
+  CreditCard,
+  Wallet,
+  Smartphone,
   Facebook,
   Twitter,
-  Linkedin,
   Instagram,
+  Linkedin,
   Youtube,
-  Github,
-  CreditCard,
-  Smartphone,
-  Wallet,
+  Globe,
 } from "lucide-react";
-import DCKLogo from "../assets/DCK.png";
 
 const Footer = () => {
-  const footerSections = [
+  const socialMedia = [
     {
-      title: "Hosting",
-      links: [
-        "Shared Hosting",
-        "Cloud Server",
-        "Dedicated Server",
-        "VPS Hosting",
-        "Enterprise Solutions",
-      ],
+      name: "Facebook",
+      icon: Facebook,
+      color: "hover:text-blue-500",
+      url: "#",
+    },
+    { name: "Twitter", icon: Twitter, color: "hover:text-blue-400", url: "#" },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      color: "hover:text-pink-500",
+      url: "#",
     },
     {
-      title: "Support",
-      links: [
-        "24/7 Support",
-        "Documentation",
-        "Product Support",
-        "Report Issues",
-      ],
+      name: "LinkedIn",
+      icon: Linkedin,
+      color: "hover:text-blue-600",
+      url: "#",
     },
-    {
-      title: "Company",
-      links: ["About us", "Why DC keepers", "Blog"],
-    },
+    { name: "YouTube", icon: Youtube, color: "hover:text-red-500", url: "#" },
+    { name: "Website", icon: Globe, color: "hover:text-teal-300", url: "#" },
   ];
 
-  const socialMedia = [
-    { name: "Facebook", icon: Facebook, color: "text-gray-300" },
-    { name: "Twitter", icon: Twitter, color: "text-gray-300" },
-    { name: "LinkedIn", icon: Linkedin, color: "text-gray-300" },
-    { name: "Instagram", icon: Instagram, color: "text-gray-300" },
-    { name: "YouTube", icon: Youtube, color: "text-gray-300" },
-    { name: "GitHub", icon: Github, color: "text-gray-300" },
+  const services = [
+    "Dedicated Hosting",
+    "Email Marketing Server",
+    "Cloud Hosting",
+    "VPS",
+    "Reseller Hosting",
+    "Shared Hosting",
   ];
+
+  const products = ["Google Workspace", "Licenses"];
+
+  const legal = ["Terms & Conditions", "Privacy policy", "Refund policy"];
 
   return (
-    <div className="relative bg-gray-800 text-white -mt-[3px]">
-      <footer className="shadow-sm">
-        <div className="max-w-screen-xl mx-auto px-6 pb-10">
-          {/* Logo */}
-          {/* <div className="flex items-center h-auto ">
-                        <img src={DCKLogo} alt="DCK Logo" className=" w-24" />
-                    </div> */}
+    <footer className="bg-gray-800 text-white py-8 px-12 relative overflow-hidden -mt-[1px]">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 ">
+          {/* Company Info */}
 
-          {/* Footer Grid with Contact Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
-            {footerSections.map((section, index) => (
-              <div key={index} className="space-y-5">
-                <h3 className="text-gray-100 font-semibold text-lg leading-tight mt-10">
-                  {section.title}
-                </h3>
-                <ul className="space-y-3">
-                  {section.links.map((link, idx) => (
-                    <li key={idx}>
-                      <a
-                        href="#"
-                        className="text-gray-300 hover:text-gray-100 transition-colors duration-300 text-base"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+          <div className="">
+            {/* Logo Section */}
+            <div className="flex-shrink-0">
+              <div className="flex items-center w-40 pt-2 ">
+                <img
+                  className="bg-gray-100 p-3 rounded-2xl"
+                  src={DCKFoot}
+                  alt=""
+                />
               </div>
-            ))}
+            </div>
+            <p className="text-sm leading-relaxed opacity-80 mt-5 w-[400px]">
+              Complete solution for online businesses including Domain
+              Registration, Web Development, Hosting, VPS Server, and more.
+              Working 24/7 at your service.
+            </p>
+          </div>
 
-            {/* Contact Us Section */}
-            <div className="space-y-3 mt-10">
-              <h3 className="text-gray-100 font-semibold text-lg leading-tight">
-                Contact Us
-              </h3>
-              <div className="space-y-6">
-                {/* Live Chat */}
-                <div className="flex items-center space-x-4">
-                  <div className="bg-gray-200 p-3 rounded-xl">
-                    <MessageCircle size={22} className="text-gray-700" />
-                  </div>
-                  <div>
-                    <p className="text-base font-medium text-gray-100">
-                      Live Chat
-                    </p>
-                    <p className="text-sm text-gray-500">Available 24/7</p>
-                  </div>
-                </div>
+          {/* Services */}
+          <div className="pr-5 pl-16">
+            <h3 className="text-sm font-bold mb-3 border-b border-teal-600 pb-1">
+              SERVICES
+            </h3>
+            <ul className="space-y-2" role="list">
+              {services.map((service, index) => (
+                <li
+                  key={index}
+                  className="text-xs hover:text-teal-200 cursor-pointer transition-colors hover:translate-x-1 transform duration-200"
+                  role="listitem"
+                >
+                  <span className="hover:border-b border-teal-200">
+                    {service}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                {/* Phone */}
-                <div className="flex items-center space-x-4">
-                  <div className="bg-gray-200 p-3 rounded-xl">
-                    <Phone size={22} className="text-gray-700" />
-                  </div>
-                  <div>
-                    <p className="text-base font-medium text-gray-100">
-                      +91 9119359554
-                    </p>
-                    <p className="text-sm text-gray-500">Mon–Fri 9AM–6PM IST</p>
-                  </div>
-                </div>
+          {/* Products & Legal */}
+          <div className="pr-10">
+            <h3 className="text-sm font-bold mb-3 border-b border-teal-600 pb-1">
+              PRODUCTS
+            </h3>
+            <ul className="space-y-2 mb-6" role="list">
+              {products.map((product, index) => (
+                <li
+                  key={index}
+                  className="text-xs hover:text-teal-200 cursor-pointer transition-colors hover:translate-x-1 transform duration-200"
+                  role="listitem"
+                >
+                  <span className="hover:border-b border-teal-200">
+                    {product}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-                {/* Email */}
-                <div className="flex items-center space-x-4">
-                  <div className="bg-gray-200 p-3 rounded-xl">
-                    <Mail size={22} className="text-gray-700" />
-                  </div>
-                  <div>
-                    <p className="text-base font-medium text-gray-100">
-                      info@dckeepers.com
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      Response within 24hrs
-                    </p>
-                  </div>
-                </div>
+            <h3 className="text-sm font-bold mb-3 border-b border-teal-600 pb-1">
+              LEGAL
+            </h3>
+            <ul className="space-y-2" role="list">
+              {legal.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-xs hover:text-teal-200 cursor-pointer transition-colors hover:translate-x-1 transform duration-200"
+                  role="listitem"
+                >
+                  <span className="hover:border-b border-teal-200">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="pr-16">
+            <h3 className="text-sm font-bold mb-3 border-b border-teal-600 pb-1">
+              CONTACT
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-2 group">
+                <Phone
+                  size={12}
+                  className="text-gray-400 flex-shrink-0 group-hover:text-teal-300 transition-colors"
+                />
+                <a
+                  href="tel:+919119359554"
+                  className="text-xs text-gray-300 hover:text-teal-200 transition-colors"
+                >
+                  +91 9119359554
+                </a>
+              </div>
+              <div className="flex items-center space-x-2 group">
+                <Mail
+                  size={12}
+                  className="text-gray-400 flex-shrink-0 group-hover:text-teal-300 transition-colors"
+                />
+                <a
+                  href="mailto:info@dckeepers.com"
+                  className="text-xs text-gray-300 hover:text-teal-200 transition-colors break-all"
+                >
+                  info@dckeepers.com
+                </a>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Follow Us Section */}
-          <div className="space-y-3 mb-4 mt-2">
-            <h3 className="text-gray-100 font-semibold text-lg leading-tight">
-              Follow Us
-            </h3>
-            <div className="flex flex-wrap gap-4">
-              {socialMedia.map((social, idx) => {
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+          {/* Payment Methods */}
+          <div className="mb-4">
+            <h4 className="font-medium mb-2 text-sm">Payments We Accept</h4>
+            <div className="flex gap-3 flex-wrap items-center">
+              <img
+                src="https://www.siteworx.in/images/mastercard.svg"
+                alt="Mastercard"
+                className="h-5 w-auto bg-white rounded p-1 shadow-sm hover:scale-105 transition-transform"
+              />
+              <img
+                src="https://www.siteworx.in/images/rupay.svg"
+                alt="RuPay"
+                className="h-5 w-auto bg-white rounded p-1 shadow-sm hover:scale-105 transition-transform"
+              />
+              <img
+                src="https://www.siteworx.in/images/paypal.svg"
+                alt="PayPal"
+                className="h-5 w-auto bg-white rounded p-1 shadow-sm hover:scale-105 transition-transform"
+              />
+              <img
+                src="https://www.siteworx.in/images/upi.svg"
+                alt="UPI"
+                className="h-5 w-auto bg-white rounded p-1 shadow-sm hover:scale-105 transition-transform"
+              />
+            </div>
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="mb-4">
+            <h4 className="font-medium mb-3 text-sm">Follow Us</h4>
+            <div className="flex gap-3 flex-wrap">
+              {socialMedia.map((social, index) => {
                 const IconComponent = social.icon;
                 return (
                   <a
-                    key={idx}
-                    href="#"
-                    className={`${social.color} hover:text-gray-100 transition-colors duration-300 p-2 rounded-lg`}
+                    key={index}
+                    href={social.url}
+                    className={`text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 transform`}
                     title={social.name}
+                    aria-label={`Follow us on ${social.name}`}
                   >
-                    <IconComponent size={22} />
+                    <IconComponent className="w-5 h-5" />
                   </a>
                 );
               })}
             </div>
           </div>
-
-          {/* Payments We Accept Section */}
-
-          {/* Bottom Section */}
-          <div>
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0 ">
-              <div className="flex items-center space-x-6 text-sm text-gray-300">
-                <span>Global - English</span>
-                <span>USD $</span>
-              </div>
-
-              {/* Legal Section */}
-              <div className="flex flex-wrap gap-4 text-xs text-gray-500 max-w-xl">
-                <p className="max-w-full">
-                  &copy; 2020 - 2025 Digital Cloud Keepers Inc. All Rights
-                  Reserved.
-                  <br />
-                  Digital Cloud Keepers and the DCK logo are registered
-                  trademarks of Digital Cloud Keepers Inc.
-                </p>
-
-                <div className="flex flex-wrap gap-3">
-                  {["Terms of Service", "Privacy Policy", "Security"].map(
-                    (text, i) => (
-                      <a
-                        key={i}
-                        href="#"
-                        className="hover:text-gray-100 transition-colors duration-300"
-                      >
-                        {text}
-                      </a>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="mt-6 pt-8 border-t border-gray-200">
-              <div className="flex flex-wrap justify-center items-center gap-5 text-sm text-gray-500">
-                <div className="flex items-center space-x-2">
-                  <span>🔒</span>
-                  <span>SOC 2 Type II Certified</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span>🛡</span>
-                  <span>ISO 27001 Compliant</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span>⚡</span>
-                  <span>99.9% Uptime SLA</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span>🌍</span>
-                  <span>Global Infrastructure</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </footer>
-    </div>
+
+        <div className="text-xs opacity-60 border-t border-gray-700 pt-3">
+          © 2024 DCKeepers. All rights reserved.
+        </div>
+      </div>
+    </footer>
   );
 };
 

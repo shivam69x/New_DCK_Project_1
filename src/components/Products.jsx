@@ -21,7 +21,7 @@ export default function Products() {
   return (
     <section
       id="new-features"
-      className="py-4 bg-white sm:py-6 lg:py-10 border rounded-xl border-gray-400 mt-5 max-w-[1120px] flex justify-center m-auto [background:radial-gradient(110%_190%_at_50%_10%,#fff_40%,#63e_130%)]"
+      className="py-4 bg-white sm:py-6 lg:py-10 border rounded-xl border-gray-400 mt-5 max-w-[1120px] flex justify-center m-auto  bg-gradient-to-t from-sky-100 shadow-md"
     >
       <div className="px-4 mx-auto max-w-5xl sm:px-2 lg:px-4">
         <div className="text-center">

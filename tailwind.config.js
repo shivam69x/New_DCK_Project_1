@@ -7,16 +7,15 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        'gentle-bounce': {
-          '0%, 100%': { transform: 'translateY(-5%)', animationTimingFunction: 'ease-in-out' },
-          '50%': { transform: 'translateY(0)', animationTimingFunction: 'ease-in-out' },
+        gentleBounce: {
+          '0%, 100%': { transform: 'translateY(-5%)' },
+          '50%': { transform: 'translateY(0)' },
         },
       },
       animation: {
-        'gentle-bounce': 'gentle-bounce 3s infinite',
+        'gentle-bounce': 'gentleBounce 3s ease-in-out infinite',
         'spin-slow': 'spin 5s linear infinite',
       },
-
       colors: {
         paleYellow: '#ffeea9',
       },

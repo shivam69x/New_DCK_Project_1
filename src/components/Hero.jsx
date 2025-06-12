@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Hero10 from "../assets/hero10.png";
 import Hero20 from "../assets/hero20.png";
 import Hero30 from "../assets/hero30.png";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,7 +50,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] h-[60vh] min-h-[500px] overflow-hidden">
+    <section
+      id="home"
+      className="relative bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] h-[60vh] min-h-[500px] overflow-hidden"
+    >
       <div className="container mx-auto px-6 h-full relative">
         {/* Carousel Container */}
         <div className="relative w-full h-full flex items-center">
@@ -77,12 +81,13 @@ const Hero = () => {
                   </div>
 
                   {/* Right Side - Image */}
-                  <div className="flex justify-center lg:justify-end items-center order-2 lg:order-2 ">
-                    <div className="w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] ">
+                  <div className="flex justify-center lg:justify-end items-center order-2 lg:order-2 animate-gentle-bounce ">
+                    <div className="w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px]  ">
+                      
                       <img
                         src={slide.image}
                         alt={`Slide ${slide.id}`}
-                        className="max-w-3xl h-auto object-cover lg:pl-6 xl:pl-44"
+                        className="max-w-3xl h-auto object-cover lg:pl-6 xl:pl-44 "
                       />
                     </div>
                   </div>

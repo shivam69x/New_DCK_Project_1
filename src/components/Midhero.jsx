@@ -50,7 +50,7 @@ const Midhero = () => {
 
   return (
     <>
-      <div className="bg-white py-16 px-2 sm:px-3 lg:px-4 border-slate-300 rounded-2xl mt-16  shadow-md [background:radial-gradient(150%_150%_at_50%_10%,white_40%,#63e_110%)] backdrop-blur-3xl">
+      <div className="bg-white py-16 px-2 sm:px-3 lg:px-4 border-slate-300 rounded-2xl mt-16 bg-gradient-to-t from-sky-200 shadow-md backdrop-blur-3xl">
         <div className="max-w-7xl mx-auto">
           {/* Hero Content */}
           <div className="text-center mb-16">
@@ -63,14 +63,7 @@ const Midhero = () => {
               Get started with professional web hosting, domain registration,
               and all the tools you need to create a successful online presence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200">
-                Get Started
-              </button>
-              <button className="border border-gray-500 hover:border-gray-800 text-gray-700 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
+           
           </div>
 
           {/* Feature Cards */}
