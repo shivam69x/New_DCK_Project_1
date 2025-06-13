@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import SecNav from "./components/SecNav";
+import SignUp from "./pages/SignUp";
+
 
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          
         </Routes>
         <Footer/>
       </BrowserRouter>

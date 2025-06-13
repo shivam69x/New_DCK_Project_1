@@ -49,6 +49,8 @@ const Navbar = () => {
                 {/* Login Button / signUp Button*/}
 
                 <div className="flex gap-3">
+
+                  <Link to={"/signup"}>
                   <button className="flex items-center px-2  text-[16px] font-medium py-[2px]  text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
                     {/* <User size={14} className="mr-2" /> */}
                     <svg
@@ -70,6 +72,7 @@ const Navbar = () => {
                     </svg>
                     Sign Up
                   </button>
+                  </Link>
 
                   <Link to={"/login"}>
                     <button className="flex items-center px-2  text-[16px] font-medium py-[2px] text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
