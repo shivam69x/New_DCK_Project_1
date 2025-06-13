@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import DCKNav from "../assets/DCK - Footer.png";
+import NavCurrency from "./NavCurrency";
 
 const SecNav = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -40,17 +41,17 @@ const SecNav = () => {
     <>
       {/* Secondary Navigation Bar */}
       <nav className="bg-cyan-100 border-b border-cyan-200  z-40 sticky top-0 ">
-        <div className="max-w-[2040px] mx-auto px-3 sm:px-5 lg:px-9">
+        <div className="max-w-[2800px] mx-auto px-0 sm:px-4 lg:px-[35px] lg:pr-[18px]">
           <div className="flex items-center h-11">
             {/* Logo  */}
             <div className="flex-shrink-0">
-              <div className="flex items-center w-[180px] pt-2 ">
+              <div className="flex items-center w-[180px] pt-1 relative right-[8px] ">
                 <img className="" src={DCKNav} alt="" />
               </div>
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center space-x-2 ml-[16px]">
+            <div className="hidden lg:flex items-center space-x-2 -ml-[5px]">
               {menuItems.map((item) => (
                 <div key={item.name} className="relative">
                   <button
@@ -107,6 +108,7 @@ const SecNav = () => {
                 </div>
               ))}
             </div>
+           <div className=""> <NavCurrency/> </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
