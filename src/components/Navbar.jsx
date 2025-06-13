@@ -165,85 +165,9 @@ const Navbar = () => {
       </nav>
 
       {/* Secondary Navigation Bar */}
-      <SecNav />
+      <div className="sticky z-50 top-0">{/* <SecNav /> */}</div>
 
       {/* Demo Content */}
-      <div className="bg-slate-200 min-h-screen">
-        <div className="max-w-6xl mx-auto px-4 ">
-          {/* <div className="text-center flex items-center flex-col">
-            <img className="w-2/4 mb-10 -mt-10" src={HeroImg} alt="" />
-            <h1 className="text-4xl font-light text-gray-800 mb-6">
-              Fast, secure and reliable web hosting
-            </h1>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              At DC Keepers, we redefine the way businesses power their digital
-              presence. Whether you are just starting out, scaling up or already
-              a well-established company, we have got the expertise to deliver
-              solutions designed just for you.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-xl font-medium text-gray-800 mb-4">Clean Design</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Minimalist approach with subtle borders, gentle colors, and plenty of white space 
-                  for a professional appearance.
-                </p>
-              </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-xl font-medium text-gray-800 mb-4">Dual Navigation</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Two-tier navigation system with utility links on top and main navigation 
-                  below, just like the original design.
-                </p>
-              </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 className="text-xl font-medium text-gray-800 mb-4">Mobile Ready</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Responsive design that adapts beautifully to mobile devices with 
-                  collapsible menus and touch-friendly interactions.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-16 p-8 bg-white rounded-lg shadow-sm border border-gray-200">
-              <h2 className="text-2xl font-light text-gray-800 mb-4">
-                Professional Web Services Navigation
-              </h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                This navigation recreates the clean, professional aesthetic of one.com with 
-                its distinctive dual-bar layout, subtle green accent, and comprehensive service categories. 
-                Perfect for web hosting, domain, and digital service websites.
-              </p>
-            </div>
-          </div> */}
-        </div>
-
-        <Hero />
-        <Faqnav />
-        <DCK />
-
-        <div className="max-w-[1200px] flex justify-center flex-col mx-auto px-0 py-1 ">
-          <Midhero />
-
-          <Offers />
-
-          <Products />
-
-          <AboutUs />
-
-          <Whyus />
-
-          <Aim />
-
-          <FAQsection />
-        </div>
-        <div className="mt-20">
-          <Clients />
-        </div>
-      </div>
     </div>
   );
 };

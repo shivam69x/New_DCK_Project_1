@@ -40,7 +40,7 @@ const SecNav = () => {
   return (
     <>
       {/* Secondary Navigation Bar */}
-      <nav className="bg-cyan-100 border-b border-cyan-200  z-40 sticky top-0 ">
+      <nav className="bg-cyan-100 border-b border-cyan-200  z-50  sticky top-0 ">
         <div className="max-w-[2800px] mx-auto px-0 sm:px-4 lg:px-[35px] lg:pr-[18px]">
           <div className="flex items-center h-11">
             {/* Logo  */}

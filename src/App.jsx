@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
+import SecNav from "./components/SecNav";
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
     <>
       <BrowserRouter>
       <Navbar/>
+      <SecNav/>
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/login" element={<Login/>} />
