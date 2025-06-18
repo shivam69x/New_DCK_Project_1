@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import DCKNav from "../assets/DCK - Footer.png";
 import NavCurrency from "./NavCurrency";
 
@@ -14,7 +14,6 @@ const SecNav = () => {
     setActiveDropdown(null);
   };
 
-  // Menu items configuration
   const menuItems = [
     { name: "Hosting", hasDropdown: true },
     { name: "Servers", hasDropdown: true },
@@ -27,9 +26,8 @@ const SecNav = () => {
     { name: "About us", hasDropdown: false },
   ];
 
-  // Dropdown content
   const dropdownContent = {
-    Hosting: ["Shared Hosting", "Reseller Hosting", "Python"],
+    Hosting: ["Shared Hosting", "Reseller Hosting", "Python Hosting"],
     Servers: [
       "Dedicated Servers",
       "Virtual Private Servers(VPS)",
@@ -37,16 +35,24 @@ const SecNav = () => {
     ],
   };
 
+  // Function to generate link paths for dropdown items
+  const getLinkPath = (subItem) => {
+    if (subItem === "Shared Hosting") return "/shared-hosting";
+    if (subItem === "Reseller Hosting") return "/reseller-hosting";
+    if (subItem === "Python Hosting") return "/python-hosting";
+    // You can add more routes here for other dropdown items if needed
+    return "#";
+  };
+
   return (
     <>
-      {/* Secondary Navigation Bar */}
-      <nav className="bg-cyan-100 border-b border-cyan-200  z-50  sticky top-0 ">
+      <nav className="bg-cyan-100 border-b border-cyan-200 z-50 sticky top-0">
         <div className="max-w-[2800px] mx-auto px-0 sm:px-4 lg:px-[35px] lg:pr-[18px]">
           <div className="flex items-center h-11">
-            {/* Logo  */}
+            {/* Logo */}
             <div className="flex-shrink-0">
-              <div className="flex items-center w-[180px] pt-1 relative right-[8px] ">
-                <img className="" src={DCKNav} alt="" />
+              <div className="flex items-center w-[180px] pt-1 relative right-[8px]">
+                <img src={DCKNav} alt="Logo" />
               </div>
             </div>
 
@@ -58,9 +64,7 @@ const SecNav = () => {
                     onClick={() =>
                       item.hasDropdown ? toggleDropdown(item.name) : null
                     }
-                    className={` uppercase flex items-center -space-x-3 px-3 py-2 text-[14px] font-bold text-gray-900 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 ${
-                      item.hasDropdown ? "cursor-pointer" : "cursor-pointer"
-                    }`}
+                    className={`uppercase flex items-center -space-x-3 px-3 py-2 text-[14px] font-bold text-gray-900 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 cursor-pointer`}
                   >
                     <span>{item.name}</span>
                     {item.hasDropdown && (
@@ -85,7 +89,7 @@ const SecNav = () => {
                   {/* Desktop Dropdown */}
                   {item.hasDropdown && (
                     <div
-                      className={`absolute top-full left-0 mt-1 w-56  bg-white rounded-md shadow-lg border border-gray-200 transition-all duration-200 ease-in-out  ${
+                      className={`absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 transition-all duration-200 ease-in-out ${
                         activeDropdown === item.name
                           ? "opacity-100 visible transform scale-100 translate-y-0"
                           : "opacity-0 invisible transform scale-95 -translate-y-2"
@@ -93,14 +97,14 @@ const SecNav = () => {
                     >
                       <div className="py-1">
                         {dropdownContent[item.name]?.map((subItem, index) => (
-                          <a
+                          <Link
                             key={index}
-                            href="#"
-                            className="block px-4 py-2 text-xs font-medium text-gray-800 hover:bg-cyan-50 hover:text-cyan-600 transition-colors duration-150"
+                            to={getLinkPath(subItem)}
                             onClick={closeDropdowns}
+                            className="block px-4 py-2 text-xs font-medium text-gray-800 hover:bg-cyan-50 hover:text-cyan-600 transition-colors duration-150"
                           >
                             {subItem}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -108,7 +112,10 @@ const SecNav = () => {
                 </div>
               ))}
             </div>
-           <div className=""> <NavCurrency/> </div>
+
+            <div className="">
+              <NavCurrency />
+            </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
@@ -179,14 +186,14 @@ const SecNav = () => {
                         }`}
                       >
                         {dropdownContent[item.name]?.map((subItem, index) => (
-                          <a
+                          <Link
                             key={index}
-                            href="#"
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-cyan-600 hover:bg-cyan-50 rounded-md transition-colors duration-150"
+                            to={getLinkPath(subItem)}
                             onClick={closeDropdowns}
+                            className="block px-3 py-2 text-sm text-gray-600 hover:text-cyan-600 hover:bg-cyan-50 rounded-md transition-colors duration-150"
                           >
                             {subItem}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     )}
@@ -207,27 +214,3 @@ const SecNav = () => {
 };
 
 export default SecNav;
-
-{
-  /* Mobile Secondary Nav */
-}
-{
-  /* <div className="lg:hidden flex items-center space-x-6 overflow-x-auto">
-              {navigationLinks.map((link) => (
-                <button
-                  key={link.name}
-                  onClick={() => handleLinkClick(link.name)}
-                  className={`flex items-center text-sm font-medium transition-colors duration-200 whitespace-nowrap ${
-                    activeLink === link.name
-                      ? "text-gray-800 border-b-2 border-gray-800 pb-4"
-                      : "text-gray-600 hover:text-gray-800 pb-4"
-                  }`}
-                >
-                  {link.name}
-                  {link.hasDropdown && (
-                    <ChevronDown size={14} className="ml-1" />
-                  )}
-                </button>
-              ))}
-            </div> */
-}

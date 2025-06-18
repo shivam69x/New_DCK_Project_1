@@ -345,8 +345,7 @@ export default function SignUp() {
                 />
               </div>
 
-{/* end-c-flag  */}
-
+              {/* end-c-flag  */}
             </div>
             {/* GSTIN Field - Full width */}
             <div className="mt-4">

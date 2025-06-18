@@ -6,6 +6,9 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import SecNav from "./components/SecNav";
 import SignUp from "./pages/SignUp";
+import SharedHostingpage from "./Products/SharedHostingpage";
+import ResellerHostingPage from "./ResellerHosting/ResellerHosting";
+import PythonHostingPage from "./PythonHosting/PythonHosting";
 
 
 
@@ -19,6 +22,9 @@ const App = () => {
           <Route path="/" element={<Homepage/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<SignUp/>} />
+          <Route path="/shared-hosting" element={<SharedHostingpage/>} />
+          <Route path="/reseller-hosting" element={<ResellerHostingPage/>} />
+          <Route path="//python-hosting" element={<PythonHostingPage/>} />
           
         </Routes>
         <Footer/>

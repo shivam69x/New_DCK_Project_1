@@ -26,10 +26,8 @@ const Homepage = () => {
           <Offers />
 
           <Products />
-
           <AboutUs />
           <Whyus />
-
           <Aim />
 
           <FAQsection />

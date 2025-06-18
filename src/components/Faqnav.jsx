@@ -19,7 +19,7 @@ export default function Faqnav() {
   };
   
   return (
-    <div className=" bg-white py-2  sticky z-50 top-11 bg-white/30 backdrop-blur-md shadow-md flex items-center h-10" >
+    <div className=" bg-white py-2  sticky z-40 top-11 bg-white/30 backdrop-blur-md shadow-md flex items-center h-10" >
       {/* Sticky Navigation Bar */}
       <div className=" transition-all duration-300 ease-in-out  ">
         <div className="container px-20 sm:pr-0 md:pr-6 lg:pr-96 sticky z-40">
