@@ -1,52 +1,52 @@
 import React from "react";
-import { Shield, Clock, Headphones, Wifi, Database, Lock } from 'lucide-react';
+import { Settings, Zap, Code, Server, GitBranch, Activity } from 'lucide-react';
 
 
 export default function PHFeatures() {
   const features = [
     {
-      icon: <Shield className="w-10 h-10 text-blue-600" />,
-      title: "Free SSL Certificate",
-      description: "Secure your website with industry-standard SSL encryption to protect visitor data and boost SEO rankings."
+      icon: <Settings className="w-10 h-10 text-green-600" />,
+      title: "Pre-configured Python Environment",
+      description: "Deploy instantly with Python 3.8, 3.9, 3.10, and 3.11 support, plus popular frameworks like Django, Flask, and FastAPI pre-installed."
     },
     {
-      icon: <Clock className="w-10 h-10 text-blue-600" />,
-      title: "99.9% Uptime Guarantee",
-      description: "Keep your website online with our reliable infrastructure and comprehensive uptime monitoring."
+      icon: <Zap className="w-10 h-10 text-green-600" />,
+      title: "Lightning-Fast Performance",
+      description: "Optimized Python runtime with SSD storage, Redis caching, and CDN integration for maximum application speed."
     },
     {
-      icon: <Headphones className="w-10 h-10 text-blue-600" />,
-      title: "24/7 Customer Support",
-      description: "Get expert help anytime with our dedicated support team available via chat, email, and phone."
+      icon: <Code className="w-10 h-10 text-green-600" />,
+      title: "Package Management",
+      description: "Full pip and conda support with isolated virtual environments to manage dependencies without conflicts."
     },
     {
-      icon: <Wifi className="w-10 h-10 text-blue-600" />,
-      title: "Unlimited Bandwidth",
-      description: "Handle traffic spikes without worry with our unmetered bandwidth and data transfer."
+      icon: <Server className="w-10 h-10 text-green-600" />,
+      title: "Scalable Infrastructure",
+      description: "Auto-scaling Python applications with load balancing and horizontal scaling to handle traffic spikes seamlessly."
     },
     {
-      icon: <Database className="w-10 h-10 text-blue-600" />,
-      title: "SSD Storage",
-      description: "Experience faster loading times with high-performance solid-state drive storage technology."
+      icon: <GitBranch className="w-10 h-10 text-green-600" />,
+      title: "Git Integration & CI/CD",
+      description: "Deploy directly from GitHub, GitLab, or Bitbucket with automated builds and continuous deployment pipelines."
     },
     {
-      icon: <Lock className="w-10 h-10 text-blue-600" />,
-      title: "Daily Backups",
-      description: "Protect your data with automated daily backups and easy one-click restore functionality."
+      icon: <Activity className="w-10 h-10 text-green-600" />,
+      title: "Real-time Monitoring",
+      description: "Monitor your Python applications with detailed logs, performance metrics, and error tracking dashboards."
     }
   ];
 
   return (
-    <section className="bg-sky-200/40 py-16 px-8">
+    <section className="bg-gradient-to-br from-sky-100 via-white to-indigo-100  py-16 px-8">
       <div className="max-w-7xl mx-auto px-8 sm:px-12">
         {/* Section Header */}
         <div className="text-center mb-12 ">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
-            Powerful Hosting Features
+            Python Server Hosting Features
           </h2>
           <p className="text-[18px] text-slate-600 max-w-2xl mx-auto">
-            Everything you need to build and grow your website with confidence, backed by enterprise-grade infrastructure.
-            "Fast, affordable & fully optimized shared hosting for growing websites."
+            Everything you need to deploy and scale your Python applications with confidence, backed by enterprise-grade infrastructure.
+            "Fast, reliable & fully optimized Python hosting for modern web applications."
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function PHFeatures() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/50 rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-200 hover:bg-white/80 border border-slate-200 backdrop-blur-xl"
+              className="bg-white/50 rounded-lg p-8 shadow-sm hover:shadow-xl transition-all duration-200 hover:bg-white/80 border border-slate-200 backdrop-blur-xl"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-6 p-4 bg-blue-50 rounded-full">
@@ -76,4 +76,3 @@ export default function PHFeatures() {
     </section>
   );
 }
-

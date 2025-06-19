@@ -1,52 +1,52 @@
 import React from "react";
-import { Shield, Clock, Headphones, Wifi, Database, Lock } from 'lucide-react';
+import { Server, Users, CreditCard, Gauge, Settings, Award } from 'lucide-react';
 
 
 export default function RHFeatures() {
   const features = [
     {
-      icon: <Shield className="w-10 h-10 text-blue-600" />,
-      title: "Free SSL Certificate",
-      description: "Secure your website with industry-standard SSL encryption to protect visitor data and boost SEO rankings."
+      icon: <Server className="w-10 h-10 text-green-600" />,
+      title: "White Label Hosting",
+      description: "Brand your hosting service with your own company name, logo, and custom control panel interface."
     },
     {
-      icon: <Clock className="w-10 h-10 text-blue-600" />,
-      title: "99.9% Uptime Guarantee",
-      description: "Keep your website online with our reliable infrastructure and comprehensive uptime monitoring."
+      icon: <Users className="w-10 h-10 text-green-600" />,
+      title: "Unlimited Client Accounts",
+      description: "Create and manage unlimited hosting accounts for your clients with full administrative control."
     },
     {
-      icon: <Headphones className="w-10 h-10 text-blue-600" />,
-      title: "24/7 Customer Support",
-      description: "Get expert help anytime with our dedicated support team available via chat, email, and phone."
+      icon: <CreditCard className="w-10 h-10 text-green-600" />,
+      title: "Integrated Billing System",
+      description: "Streamline your business with built-in WHMCS integration for automated invoicing and payments."
     },
     {
-      icon: <Wifi className="w-10 h-10 text-blue-600" />,
-      title: "Unlimited Bandwidth",
-      description: "Handle traffic spikes without worry with our unmetered bandwidth and data transfer."
+      icon: <Gauge className="w-10 h-10 text-green-600" />,
+      title: "Resource Monitoring",
+      description: "Track bandwidth, disk usage, and performance metrics across all your client accounts in real-time."
     },
     {
-      icon: <Database className="w-10 h-10 text-blue-600" />,
-      title: "SSD Storage",
-      description: "Experience faster loading times with high-performance solid-state drive storage technology."
+      icon: <Settings className="w-10 h-10 text-green-600" />,
+      title: "Full Root Access",
+      description: "Complete server control with root access, custom configurations, and software installation privileges."
     },
     {
-      icon: <Lock className="w-10 h-10 text-blue-600" />,
-      title: "Daily Backups",
-      description: "Protect your data with automated daily backups and easy one-click restore functionality."
+      icon: <Award className="w-10 h-10 text-green-600" />,
+      title: "Priority Support",
+      description: "Get dedicated reseller support with priority ticket handling and technical assistance for your business."
     }
   ];
 
   return (
-    <section className="bg-sky-200/40 py-16 px-8">
+    <section className="bg-gradient-to-br from-sky-100 via-white to-indigo-100 py-16 px-8">
       <div className="max-w-7xl mx-auto px-8 sm:px-12">
         {/* Section Header */}
         <div className="text-center mb-12 ">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
-            Powerful Hosting Features
+            Powerful Reseller Features
           </h2>
           <p className="text-[18px] text-slate-600 max-w-2xl mx-auto">
-            Everything you need to build and grow your website with confidence, backed by enterprise-grade infrastructure.
-            "Fast, affordable & fully optimized shared hosting for growing websites."
+            Everything you need to start and scale your hosting business with professional-grade reseller tools and support.
+            "Build your hosting empire with our comprehensive reseller platform."
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function RHFeatures() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/50 rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-200 hover:bg-white/80 border border-slate-200 backdrop-blur-xl"
+              className="bg-white/50 rounded-lg p-8 shadow-sm hover:shadow-xl transition-all duration-200 hover:bg-white/80 border border-slate-200 backdrop-blur-xl"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-6 p-4 bg-blue-50 rounded-full">
@@ -76,4 +76,3 @@ export default function RHFeatures() {
     </section>
   );
 }
-

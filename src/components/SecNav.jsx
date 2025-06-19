@@ -17,7 +17,7 @@ const SecNav = () => {
   const menuItems = [
     { name: "Hosting", hasDropdown: true },
     { name: "Servers", hasDropdown: true },
-    { name: "Forex Servers", hasDropdown: false },
+    { name: "Forex Servers", hasDropdown: false, path: "/forex-servers" },
     { name: "Proxy Servers", hasDropdown: false },
     { name: "Bulk Email", hasDropdown: false },
     { name: "Google Workspace", hasDropdown: false },
@@ -57,34 +57,45 @@ const SecNav = () => {
             </div>
 
             {/* Desktop Menu */}
+
             <div className="hidden lg:flex items-center space-x-2 -ml-[5px]">
               {menuItems.map((item) => (
                 <div key={item.name} className="relative">
-                  <button
-                    onClick={() =>
-                      item.hasDropdown ? toggleDropdown(item.name) : null
-                    }
-                    className={`uppercase flex items-center -space-x-3 px-3 py-2 text-[14px] font-bold text-gray-900 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 cursor-pointer`}
-                  >
-                    <span>{item.name}</span>
-                    {item.hasDropdown && (
-                      <svg
-                        className={`w-[18px] h-[18px] relative left-[18px] transition-transform duration-200 ${
-                          activeDropdown === item.name ? "rotate-180" : ""
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    )}
-                  </button>
+                  {item.name === "Forex Servers" ? (
+                    <Link
+                      to={item.path}
+                      onClick={closeDropdowns}
+                      className="uppercase flex items-center px-3 py-2 text-[14px] font-bold text-[#075466] hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 cursor-pointer"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() =>
+                        item.hasDropdown ? toggleDropdown(item.name) : null
+                      }
+                      className="uppercase flex items-center -space-x-3 px-3 py-2 text-[14px] font-bold text-[#075466] hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 cursor-pointer"
+                    >
+                      <span>{item.name}</span>
+                      {item.hasDropdown && (
+                        <svg
+                          className={`w-[18px] h-[18px] relative left-[18px] transition-transform duration-200 ${
+                            activeDropdown === item.name ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      )}
+                    </button>
+                  )}
 
                   {/* Desktop Dropdown */}
                   {item.hasDropdown && (

@@ -2,7 +2,7 @@ import React from "react";
 import { Shield, Clock, Headphones, Wifi, Database, Lock } from 'lucide-react';
 
 
-export default function SHFeatures() {
+export default function ForexFeatures() {
   const features = [
     {
       icon: <Shield className="w-10 h-10 text-green-600" />,

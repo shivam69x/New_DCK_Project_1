@@ -5,7 +5,7 @@ export default function Offers() {
     {
       name: "Shared Hosting",
       subtitle: "STARTING FROM",
-      price: "2",
+      price: "199",
       features: [
         "1 Website",
         "1 Cpanel account",
@@ -20,7 +20,7 @@ export default function Offers() {
     {
       name: "Reseller Hosting",
       subtitle: "STARTING FROM",
-      price: "8",
+      price: "699",
       features: [
         "Unlimited Websites",
         "Unlimited Cpanel Accounts",
@@ -35,11 +35,11 @@ export default function Offers() {
     {
       name: "Cloud VPS",
       subtitle: "Best for Entrepreneurs",
-      price: "17",
+      price: "999",
       features: [
         "2 CPU Cores",
-        "4 GB RAM",
-        "50 GB Hard Disk-SSD",
+        "2 GB RAM",
+        "30 GB Hard Disk-SSD",
         "1TB Bandwidth",
         "1 IP Addresses",
         "Free CentOS WP-Cpanel",
@@ -49,15 +49,16 @@ export default function Offers() {
       bestValue: true,
     },
     {
-      name: "Cloud VPS",
+      name: "Forex Server",
       subtitle: "STARTING FROM",
-      price: "40",
+      price: "1499",
       features: [
+        "2 CPU Cores",
+        "4 GB RAM",
+        "50 GB Hard Disk-SSD",
         "Intel Core i5-3470 4 Cores",
-        "3.20Ghz",
         "8 GB DDR5",
-        "240 GB SSD",
-        "2000 GBPS Bandwidth",
+        "1 GBPS Bandwidth",
         "1 IP Address",
         "99.9% Uptime Guarantee",
       ],
@@ -71,27 +72,13 @@ export default function Offers() {
       {/* Hero Section */}
       <div className="max-w-[1500px] mx-auto py-16">
         <div className="text-center mb-12">
-          <h1 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#0e3c47] mb-6">
             Most Popular Hosting Plans
           </h1>
-          <h2 className="text-gray-800 mb-14 text-base">
-            Cheap Dedicated Server Hosting provider in India
+          <h2 className="text-[#0e3c47c3] mb-14 text-base">
+            Cheap and best Server Hosting provider in India
           </h2>
 
-          {/* <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 text-gray-700">
-            <div className="flex items-center space-x-2">
-              <span className="w-5 h-5 text-green-600 font-bold">✓</span>
-              <span>The first choice for domain hosting</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-5 h-5 text-green-600 font-bold">✓</span>
-              <span>Reliable online partner</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-5 h-5 text-green-600 font-bold">✓</span>
-              <span>24/7 support</span>
-            </div>
-          </div> */}
         </div>
 
         {/* Pricing Cards */}
@@ -114,22 +101,22 @@ export default function Offers() {
               )}
 
               <div className="text-center mb-6 px-3">
-                <h3 className="text-lg font-bold text-gray-800 mb-1">
+                <h3 className="text-lg font-bold text-[#0e3c47] mb-1">
                   {plan.name}
                 </h3>
-                <p className="text-xs text-gray-600 mb-4">{plan.subtitle}</p>
+                <p className="text-xs text-[#0e3c47de] mb-4">{plan.subtitle}</p>
 
                 <div className="mb-4">
-                  <span className="text-3xl font-bold text-gray-800">
-                    ${plan.price}
+                  <span className="text-3xl font-bold text-[#0b2d35]">
+                    ₹ {plan.price}
                   </span>
-                  <span className="text-gray-600">/mo.*</span>
+                  <span className="text-[#0e3c47cb]">/mo.</span>
                 </div>
 
                 <button
                   className={`w-full py-3 rounded-md font-medium text-sm transition-transform duration-300 ease-in-out transform ${
                     plan.buttonStyle === "primary"
-                      ? "bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 "
+                      ? "bg-[#1c7389] text-white hover:bg-[#0e3c47] hover:scale-105 "
                       : "border border-gray-300 text-gray-700 hover:bg-gray-50 hover:scale-105"
                   }`}
                 >
@@ -138,7 +125,7 @@ export default function Offers() {
               </div>
 
               <div>
-                <h4 className="font-bold text-base text-gray-800 mb-3">
+                <h4 className="font-bold text-base text-[#0b2e36] mb-3">
                   Key features
                 </h4>
                 <ul className="space-y-3 list-disc px-4">

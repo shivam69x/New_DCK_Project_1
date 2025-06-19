@@ -16,20 +16,22 @@ import {
   Globe,
 } from "lucide-react";
 
+import { FaWhatsapp } from "react-icons/fa"; 
+
 const Footer = () => {
   const socialMedia = [
     {
-      name: "Facebook",
-      icon: Facebook,
-      color: "hover:text-blue-500",
+      name: "WhatsApp",
+      icon: FaWhatsapp, 
+      color: "hover:text-green-500",
       url: "#",
     },
-    { name: "Twitter", icon: Twitter, color: "hover:text-blue-400", url: "#" },
+    
     {
       name: "Instagram",
       icon: Instagram,
       color: "hover:text-pink-500",
-      url: "#",
+      url: "https://www.instagram.com/dckeepers/",
     },
     {
       name: "LinkedIn",
@@ -37,8 +39,7 @@ const Footer = () => {
       color: "hover:text-blue-600",
       url: "#",
     },
-    { name: "YouTube", icon: Youtube, color: "hover:text-red-500", url: "#" },
-    { name: "Website", icon: Globe, color: "hover:text-teal-300", url: "#" },
+    
   ];
 
   const services = [
@@ -136,7 +137,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="pr-16">
             <h3 className="text-sm font-bold mb-3 border-b border-teal-600 pb-1">
-              CONTACT
+              CONTACT US
             </h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2 group">
@@ -196,7 +197,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="mb-4">
+          <div className="mb-4 pr-12">
             <h4 className="font-medium mb-3 text-sm">Follow Us</h4>
             <div className="flex gap-3 flex-wrap">
               {socialMedia.map((social, index) => {
@@ -218,7 +219,7 @@ const Footer = () => {
         </div>
 
         <div className="text-xs opacity-60 border-t border-gray-700 pt-3">
-          © 2024 DCKeepers. All rights reserved.
+          © 2025 DCKeepers. All rights reserved.
         </div>
       </div>
     </footer>

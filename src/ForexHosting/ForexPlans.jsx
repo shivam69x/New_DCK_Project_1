@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Check, Star } from 'lucide-react';
 
-const SHPlans = () => {
+const ForexPlans = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -219,4 +219,4 @@ const SHPlans = () => {
   );
 };
 
-export default SHPlans;
+export default ForexPlans;

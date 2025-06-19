@@ -9,6 +9,8 @@ import SignUp from "./pages/SignUp";
 import SharedHostingpage from "./Products/SharedHostingpage";
 import ResellerHostingPage from "./ResellerHosting/ResellerHosting";
 import PythonHostingPage from "./PythonHosting/PythonHosting";
+import ForexHosting from "./ForexHosting/ForexHosting";
+import ContactBtn from "./components/ContactBtn";
 
 
 
@@ -17,6 +19,7 @@ const App = () => {
     <>
       <BrowserRouter>
       <Navbar/>
+      <ContactBtn/>
       <SecNav/>
         <Routes>
           <Route path="/" element={<Homepage/>} />
@@ -24,7 +27,8 @@ const App = () => {
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/shared-hosting" element={<SharedHostingpage/>} />
           <Route path="/reseller-hosting" element={<ResellerHostingPage/>} />
-          <Route path="//python-hosting" element={<PythonHostingPage/>} />
+          <Route path="/python-hosting" element={<PythonHostingPage/>} />
+          <Route path="/forex-servers" element={<ForexHosting/>} />
           
         </Routes>
         <Footer/>

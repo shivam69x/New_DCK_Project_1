@@ -25,7 +25,7 @@ const Midhero = () => {
     {
       title: "Lightning fast",
       description:
-        "Benefit from ultra-fast load times and unlimited data traffic, powered by world-class network hubs.",
+        "Benefit from ultra-fast load times and unlimited data traffic.",
       bgColor: "bg-orange-500",
       iconBg: "bg-orange-100",
       icon: LIGHT,
@@ -54,12 +54,12 @@ const Midhero = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Content */}
           <div className="text-center mb-16">
-            <h1 className="text-2xl md:text-5xl lg:text-3xl font-light text-gray-900 mb-6">
+            <h1 className="text-2xl md:text-5xl lg:text-3xl font-light text-[#0e3c47] mb-6">
               Everything you need to
               <br />
               <span className="font-medium">build your business online</span>
             </h1>
-            <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-[#0e3c47c0] max-w-3xl mx-auto mb-8">
               Get started with professional web hosting, domain registration,
               and all the tools you need to create a successful online presence.
             </p>
@@ -71,7 +71,7 @@ const Midhero = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className=" rounded-xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-50 border-t-slate-300 border-s-slate-300 border-e-slate-300 bg-white/40 backdrop-blur-md shadow-md"
+                className=" rounded-xl p-4 text-center shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-50 border-t-slate-300 border-s-slate-300 border-e-slate-300 bg-white/40 backdrop-blur-md"
               >
                 {/* Icon Container */}
                 <div className="relative mb-6 flex justify-center">
@@ -91,10 +91,10 @@ const Midhero = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-medium text-gray-900 mb-4">
+                <h3 className="text-lg font-medium text-[#0e3c47] mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-sm font-normal">
+                <p className="text-[#0e3c47e1] leading-relaxed text-sm font-normal">
                   {feature.description}
                 </p>
               </div>

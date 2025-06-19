@@ -38,8 +38,8 @@ const Navbar = () => {
   return (
     <div className=" ">
       {/* Top Navigation Bar */}
-      <nav className="navbar-container sticky top-0 z-30 bg-white border-b border-gray-200">
-        <div className="max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-16">
+      <nav className="navbar-container sticky top-0 z-30 bg-white border-b border-gray-200 ">
+        <div className="max-w-[2800px] mx-auto lg:pr-[18px] px-4 sm:px-6 lg:px-[140px]">
           <div className="flex justify-between items-center h-[40px]">
             {/* Logo */}
 

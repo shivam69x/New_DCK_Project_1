@@ -73,10 +73,10 @@ const Hero = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 h-full items-center">
                     {/* Left Side - Text Content */}
                     <div className="flex flex-col justify-center space-y-7 order-1 lg:order-1">
-                      <h1 className="text-lg lg:text-2xl xl:text-4xl  font-bold leading-tight text-[#0a2540]">
+                      <h1 className="text-lg lg:text-2xl xl:text-4xl  font-bold leading-tight text-[#0e3c47]">
                         {slide.heading}
                       </h1>
-                      <p className="text-sm lg:text-lg leading-relaxed text-[#3b3f5c] max-w-lg">
+                      <p className="text-sm lg:text-lg leading-relaxed max-w-lg text-[#0e3c47cc]">
                         {slide.paragraph}
                       </p>
                     </div>
