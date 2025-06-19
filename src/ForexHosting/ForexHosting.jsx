@@ -16,20 +16,11 @@ import Clients from "../components/Clients";
 
 const ForexHosting = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentPrice, setCurrentPrice] = useState(1.0847);
-  const [priceChange, setPriceChange] = useState(0.0023);
 
   useEffect(() => {
     setIsVisible(true);
 
     // Simulate live price updates
-    const interval = setInterval(() => {
-      const change = (Math.random() - 0.5) * 0.001;
-      setCurrentPrice((prev) => +(prev + change).toFixed(4));
-      setPriceChange(change);
-    }, 3000);
-
-    return () => clearInterval(interval);
   }, []);
 
   const features = [
@@ -40,7 +31,7 @@ const ForexHosting = () => {
 
   return (
     <>
-      <section className="min-h-screen bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] relative overflow-hidden">
+      <section className=" bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] relative overflow-hidden min-h-[50vh]">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-32 h-32 border border-gray-400 rounded-full"></div>
@@ -49,7 +40,7 @@ const ForexHosting = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+        {/* <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
           <div className="flex items-center space-x-6 bg-white/80 backdrop-blur-sm rounded-full px-6 py-2 shadow-sm">
             <div className="flex items-center space-x-1">
               <div className="flex">
@@ -69,10 +60,10 @@ const ForexHosting = () => {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
+        <div className="container mx-auto px-4 py-12 md:py-14 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ">
             {/* Left Column - Main Content */}
             <div
               className={`space-y-8 transform transition-all duration-1000 ${
@@ -82,38 +73,14 @@ const ForexHosting = () => {
               }`}
             >
               {/* Live Price Ticker */}
-              <div className="inline-flex items-center space-x-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-sm border border-white/20">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-gray-700">
-                    EUR/USD
-                  </span>
-                  <span className="text-sm font-bold text-gray-900">
-                    {currentPrice}
-                  </span>
-                  <span
-                    className={`text-xs px-2 py-1 rounded-full ${
-                      priceChange >= 0
-                        ? "bg-green-100 text-green-700"
-                        : "bg-red-100 text-red-700"
-                    }`}
-                  >
-                    {priceChange >= 0 ? "+" : ""}
-                    {(priceChange * 100).toFixed(2)}%
-                  </span>
-                </div>
-              </div>
 
               {/* Main Headline */}
-              <div className="space-y-4">
-                <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-                  Trade Forex Like a
-                  <span className="bg-gradient-to-r from-[#0077b6] to-[#00b4d8] bg-clip-text text-transparent block">
-                    Market Pro
-                  </span>
+              <div className="space-y-4  -mt-[2px]">
+                <h1 className="text-2xl md:text-3xl lg:text-[58px] font-bold text-[#0e3c47] leading-tight mb-7">
+                  Forex Server Hosting
                 </h1>
 
-                <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl">
+                <p className="text-sm md:text-base text-[#0e3c47d5] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   Access global currency markets 24/7 with lightning-fast
                   execution, competitive spreads, and professional-grade trading
                   tools.
@@ -135,7 +102,7 @@ const ForexHosting = () => {
                     <div className="flex-shrink-0 w-8 h-8 bg-[#0077b6]/10 rounded-full flex items-center justify-center">
                       <feature.icon className="w-4 h-4 text-[#0077b6]" />
                     </div>
-                    <span className="text-gray-700 font-medium">
+                    <span className="text-[#0e3c47] font-medium">
                       {feature.text}
                     </span>
                   </div>
@@ -143,38 +110,23 @@ const ForexHosting = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group bg-[#0077b6] hover:bg-[#005f8a] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg flex items-center justify-center space-x-2">
-                  <span>Start Trading Now</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-
-                <button className="group bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 font-semibold px-8 py-4 rounded-full transition-all duration-300 border border-gray-200 hover:border-[#0077b6] flex items-center justify-center space-x-2">
-                  <Play className="w-5 h-5 text-[#0077b6]" />
-                  <span>Watch Demo</span>
+              <div className="pt-0">
+                <button
+                  className="group bg-[#126276] hover:bg-[#218aa4] text-white font-semibold px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg inline-flex items-center space-x-2 text-base"
+                  aria-label="View all hosting plans"
+                >
+                  <span>See All Plans</span>
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
 
               {/* Trust Badge */}
-              <div className="pt-8 border-t border-gray-200/50">
-                <p className="text-sm text-gray-500 mb-3">
-                  Trusted by professionals worldwide
-                </p>
-                <div className="flex items-center space-x-6 opacity-60">
-                  <div className="text-xs font-bold text-gray-400">
-                    REGULATED
-                  </div>
-                  <div className="text-xs font-bold text-gray-400">SECURE</div>
-                  <div className="text-xs font-bold text-gray-400">
-                    24/7 SUPPORT
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
             {/* Right Column - Illustration */}
             <div
-              className={`relative transform transition-all duration-1200 ${
+              className={`relative bottom-[20px] transform transition-all duration-1200 ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-12 opacity-0"

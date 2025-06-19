@@ -41,10 +41,10 @@ export default function SHFeatures() {
       <div className="max-w-7xl mx-auto px-8 sm:px-12">
         {/* Section Header */}
         <div className="text-center mb-12 ">
-          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#0e3c47] mb-4">
             Powerful Shared Hosting Features
           </h2>
-          <p className="text-[18px] text-slate-600 max-w-2xl mx-auto">
+          <p className="text-[18px] text-[#0e3c47ca] max-w-2xl mx-auto">
             Everything you need to build and grow your website with confidence, backed by enterprise-grade infrastructure.
             "Fast, affordable & fully optimized shared hosting for growing websites."
           </p>
@@ -61,10 +61,10 @@ export default function SHFeatures() {
                 <div className="mb-6 p-4 bg-sky-200/60 rounded-full">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">
+                <h3 className="text-lg font-semibold text-[#0e3c47] mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-slate-600 text-[18px] leading-relaxed">
+                <p className="text-[#0e3c47cf] text-[18px] leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -73,7 +73,7 @@ export default function SHFeatures() {
         </div>
 
       </div>
-    </section>
+    </section> 
   );
 }
 

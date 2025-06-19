@@ -85,11 +85,11 @@ const SHPlans = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-2xl sm:text-[40px] font-bold text-gray-900 mb-5">
+          <h2 className="text-2xl sm:text-[40px] font-bold text-[#0e3c47] mb-5">
             Choose Your Perfect
             <span className="text-blue-600"> Shared Hosting Plan</span>
           </h2>
-          <p className="text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm text-[#0e3c47cc] max-w-3xl mx-auto leading-relaxed">
             Get started with complete confidence. Our 30-day money-back guarantee means it's risk-free.
           </p>
         </div>
@@ -119,8 +119,8 @@ const SHPlans = () => {
               <div className="p-8">
                 {/* Plan Header */}
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-[#0e3c47] mb-2">{plan.name}</h3>
+                  <p className="text-[#0e3c47da] text-sm mb-4">{plan.description}</p>
                   
                   {/* Pricing */}
                   <div className="mb-4">
@@ -131,7 +131,7 @@ const SHPlans = () => {
                       </span>
                     </div>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-gray-900">₹{plan.price}</span>
+                      <span className="text-4xl font-bold text-[#0e3c47]">₹{plan.price}</span>
                       <span className="text-gray-600 ml-1">/month</span>
                     </div>
                   </div>
@@ -155,7 +155,7 @@ const SHPlans = () => {
                 <button
                   className={`w-full py-4 px-6 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-lg hover:shadow-xl'
+                      ? "rounded-xl border border-white bg-gradient-to-r from-[#0e3c47] to-[#0040514d] text-white shadow-lg backdrop-blur-md transition duration-300 hover:border-white/100 hover:from-[#133c46] hover:to-[#0040515d] hover:shadow-xl"
                       : 'bg-gray-100 text-gray-900 hover:bg-blue-50 hover:text-blue-700 border-2 border-transparent hover:border-blue-200'
                   }`}
                 >

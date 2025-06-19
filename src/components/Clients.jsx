@@ -53,7 +53,7 @@ export default function Clients() {
       <section className="py-5  -mt-0">
         <div className="mx-auto max-w-7xl px-1 sm:px-1 lg:px-2">
           <div className="mb-16 backdrop-blur-xl bg-white/10 border border-white/20 rounded-xl shadow-xl">
-            <h2 className="py-3 text-2xl text-center font-bold text-[#0f3843]  drop-shadow-[0_0_10px_#d8ecf0]">
+            <h2 className="py-3 text-2xl text-center font-bold text-[#0f3843]  drop-shadow-[0_0_10px_#eefbff]">
               What our happy user says
             </h2>
           </div>

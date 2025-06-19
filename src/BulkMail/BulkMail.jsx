@@ -1,13 +1,18 @@
 import React from "react";
 import { Cloud, Download, Upload, Server, ArrowRight } from "lucide-react";
-import SHImg from "../assets/sh08.png";
-import SHPlans from "./SHPlans";
-import SHFeatures from "./SHFeatures";
+import { Mail, Users, BarChart3 } from 'lucide-react';
+import MailImg from "../assets/bulkmail1.png";
+import Bulklans from "./MailPlans";
+import MailPlans from "./MailPlans";
 import FAQsection from "../components/FAQsection";
 import Clients from "../components/Clients";
+import MailFeatures from "./MailFeatures";
+// import SHPlans from "./SHPlans";
+// import SHFeatures from "./SHFeatures";
+// import FAQsection from "../components/FAQsection";
+// import Clients from "../components/Clients";
 
-
-const SharedHostingpage = () => {
+const BulkMail = () => {
   return (
     <>
       <div className="min-h-[65vh] bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] relative overflow-hidden">
@@ -24,55 +29,55 @@ const SharedHostingpage = () => {
         <div className="container mx-auto px-4 py-4 lg:py-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-6 items-center">
             {/* Left Side - Main Content */}
-            <div className="text-center lg:text-left space-y-8">
+            <div className="text-center lg:text-left -mt-10 space-y-10">
               <div className="space-y-4">
-                <h1 className="text-2xl md:text-3xl lg:text-[55px] font-bold text-[#0e3c47] leading-tight flex flex-col gap-2">
-                  Shared Hosting{" "}
-                  <span className="relative inline-block">
-                    <span className="bg-[#19849f] text-white px-4 py-2 rounded-lg transform -rotate-2 inline-block shadow-lg text-2xl">
-                      5% OFF
-                    </span>
-                  </span>
+                <h1 className="text-2xl md:text-3xl lg:text-[55px] font-bold text-[#0e3c47] leading-tight flex flex-col gap-2 mb-6">
+                  Email Marketing{" "}
                 </h1>
 
                 <p className="text-sm md:text-base text-[#0e3c47d5] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                  We offer the best hosting solutions for your needs, catering
-                  to clients from personal to corporate. Our data centers are
-                  strategically located worldwide to ensure that your website is
-                  always up. Happy hosting!
+                  Power Your Outreach with High-Performance Bulk Email Servers —
+                  Reach Thousands Instantly with Unmatched Deliverability and
+                  Speed
                 </p>
               </div>
 
               {/* Features List */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center lg:text-left">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4  text-center lg:text-left">
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <Server className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <Mail className="w-5 h-5 text-[#1c758b] mr-2" />
                     <span className="text-[#0e3c47] font-semibold text-[20px]">
-                      99.9% Uptime
+                      99.9% Delivery Rate
                     </span>
                   </div>
-                  <p className="text-slate-600 text-sm">Reliable performance</p>
+                  <p className="text-slate-600 text-sm">
+                    Guaranteed inbox delivery
+                  </p>
                 </div>
 
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <Cloud className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <Users className="w-5 h-5 text-[#1c758b] mr-2" />
                     <span className="text-[#0e3c47] font-semibold text-[20px]">
-                      Global CDN
+                      Smart Segmentation
                     </span>
                   </div>
-                  <p className="text-slate-600 text-sm">Worldwide coverage</p>
+                  <p className="text-slate-600 text-sm">
+                    Target the right audience
+                  </p>
                 </div>
 
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <Download className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <BarChart3 className="w-5 h-5 text-[#1c758b] mr-2" />
                     <span className="text-[#0e3c47] font-semibold text-[20px]">
-                      Fast Speed
+                      Real-time Analytics
                     </span>
                   </div>
-                  <p className="text-slate-600 text-sm">Optimized delivery</p>
+                  <p className="text-slate-600 text-sm">
+                    Track campaign performance
+                  </p>
                 </div>
               </div>
 
@@ -93,20 +98,9 @@ const SharedHostingpage = () => {
               {/* Main Cloud Server Icon */}
               <div className="relative bottom-[0px]">
                 {/* Background Circle */}
-                <img className="animate-float w-[600px]" src={SHImg} alt="" />
+                <img className="animate-float w-[600px]" src={MailImg} alt="" />
 
                 {/* Floating Elements */}
-                <div className="absolute top-9 -left-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float">
-                  <Server className="w-6 h-6 text-slate-700" />
-                </div>
-
-                <div className="absolute bottom-6 -right-1 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-300">
-                  <Cloud className="w-6 h-6 text-slate-700" />
-                </div>
-
-                <div className="absolute top-1/2 -right-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-700">
-                  <Download className="w-6 h-6 text-slate-700" />
-                </div>
               </div>
             </div>
           </div>
@@ -150,15 +144,14 @@ const SharedHostingpage = () => {
         `}</style>
       </div>
 
-      <SHPlans/>
-      <SHFeatures/> 
+      <MailPlans/>
+      <MailFeatures/> 
       <FAQsection />
       <div className=" mt-20">
         <Clients />
-
-      </div>
+        </div>
     </>
   );
 };
 
-export default SharedHostingpage;
+export default BulkMail;

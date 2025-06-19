@@ -18,12 +18,12 @@ const SecNav = () => {
     { name: "Hosting", hasDropdown: true },
     { name: "Servers", hasDropdown: true },
     { name: "Forex Servers", hasDropdown: false, path: "/forex-servers" },
-    { name: "Proxy Servers", hasDropdown: false },
-    { name: "Bulk Email", hasDropdown: false },
-    { name: "Google Workspace", hasDropdown: false },
-    { name: "Microsoft 365", hasDropdown: false },
-    { name: "License", hasDropdown: false },
-    { name: "About us", hasDropdown: false },
+    { name: "Proxy Servers", hasDropdown: false, path: "/proxy-servers" },
+    { name: "Bulk Email", hasDropdown: false, path: "/bulk-email" },
+    { name: "Google Workspace", hasDropdown: false, path: "/google-workspace" },
+    { name: "Microsoft 365", hasDropdown: false, path: "/microsoft-365" },
+    { name: "License", hasDropdown: false, path: "/license" },
+    { name: "About us", hasDropdown: false, path: "/about-us" },
   ];
 
   const dropdownContent = {
@@ -61,7 +61,7 @@ const SecNav = () => {
             <div className="hidden lg:flex items-center space-x-2 -ml-[5px]">
               {menuItems.map((item) => (
                 <div key={item.name} className="relative">
-                  {item.name === "Forex Servers" ? (
+                  {item.path ? (
                     <Link
                       to={item.path}
                       onClick={closeDropdowns}

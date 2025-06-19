@@ -6,7 +6,6 @@ import RHFeatures from "./RHFeatures";
 import FAQsection from "../components/FAQsection";
 import Clients from "../components/Clients";
 
-
 const ResellerHostingPage = () => {
   return (
     <>
@@ -26,16 +25,16 @@ const ResellerHostingPage = () => {
             {/* Left Side - Main Content */}
             <div className="text-center lg:text-left space-y-8">
               <div className="space-y-4">
-                <h1 className="text-2xl md:text-3xl lg:text-[55px] font-bold text-slate-900 leading-tight flex flex-col gap-2">
+                <h1 className="text-2xl md:text-3xl lg:text-[55px] font-bold text-[#0e3c47] leading-tight flex flex-col gap-2">
                   Reseller Hosting{" "}
                   <span className="relative inline-block">
-                    <span className="bg-[#1ab7c6] text-white px-4 py-2 rounded-lg transform -rotate-2 inline-block shadow-lg text-2xl">
+                    <span className="bg-[#19849f] text-white px-4 py-2 rounded-lg transform -rotate-2 inline-block shadow-lg text-2xl">
                       10% OFF
                     </span>
                   </span>
                 </h1>
 
-                <p className="text-sm md:text-base text-slate-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                <p className="text-sm md:text-base text-[#0e3c47d5]  max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   We offer the best hosting solutions for your needs, catering
                   to clients from personal to corporate. Our data centers are
                   strategically located worldwide to ensure that your website is
@@ -47,8 +46,8 @@ const ResellerHostingPage = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center lg:text-left">
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <Server className="w-5 h-5 text-[#1ab7c6] mr-2" />
-                    <span className="text-slate-900 font-semibold text-[20px]">
+                    <Server className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <span className="text-[#0e3c47] font-semibold text-[20px]">
                       99.9% Uptime
                     </span>
                   </div>
@@ -57,8 +56,8 @@ const ResellerHostingPage = () => {
 
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <Cloud className="w-5 h-5 text-[#1ab7c6] mr-2" />
-                    <span className="text-slate-900 font-semibold text-[20px]">
+                    <Cloud className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <span className="text-[#0e3c47] font-semibold text-[20px]">
                       Global CDN
                     </span>
                   </div>
@@ -67,8 +66,8 @@ const ResellerHostingPage = () => {
 
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <Download className="w-5 h-5 text-[#1ab7c6] mr-2" />
-                    <span className="text-slate-900 font-semibold text-[20px]">
+                    <Download className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <span className="text-[#0e3c47] font-semibold text-[20px]">
                       Fast Speed
                     </span>
                   </div>
@@ -79,7 +78,7 @@ const ResellerHostingPage = () => {
               {/* CTA Button */}
               <div className="pt-0">
                 <button
-                  className="group bg-[#1ab7c6] hover:bg-[#158a96] text-white font-semibold px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg inline-flex items-center space-x-2 text-base"
+                  className="group bg-[#126276] hover:bg-[#218aa4] text-white font-semibold px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg inline-flex items-center space-x-2 text-base"
                   aria-label="View all hosting plans"
                 >
                   <span>See All Plans</span>
@@ -149,11 +148,11 @@ const ResellerHostingPage = () => {
           }
         `}</style>
       </div>
-<RHPlans/>
-<RHFeatures/>
-     <FAQsection />
+      <RHPlans />
+      <RHFeatures />
+      <FAQsection />
       <div className=" mt-20">
-         <Clients />
+        <Clients />
       </div>
     </>
   );
