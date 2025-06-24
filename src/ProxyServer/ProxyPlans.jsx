@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Check, Star } from "lucide-react";
 
-const RHPlans = () => {
+const ProxyPlans = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -12,78 +12,70 @@ const RHPlans = () => {
   const plans = [
     {
       name: "Basic",
-      price: "799",
-      originalPrice: "1,598",
+      price: "180",
+      originalPrice: "360",
       savings: "50%",
       description: "Perfect for personal websites and blogs",
       features: [
-        "Unlimited Website",
-        "25 GB Storage",
-        "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+        "1 Website",
+        "10 GB SSD Storage",
+        "100 GB Bandwidth",
+        "Free SSL Certificate",
+        "24/7 Support",
+        "1-Click WordPress Install",
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: false,
     },
     {
       name: "Professional",
-      price: "1,299",
-      originalPrice: "2,598",
+      price: "269",
+      originalPrice: "538",
       savings: "50%",
       description: "Ideal for growing businesses and portfolios",
       features: [
-       "Unlimited Website",
-        "50 GB Storage",
+        "5 Websites",
+        "50 GB SSD Storage",
         "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+        "Free SSL Certificate",
+        "Priority Support",
+        "Advanced Security Features",
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: true,
     },
     {
       name: "Business",
-      price: "1,599",
-      originalPrice: "3,198",
+      price: "389",
+      originalPrice: "778",
       savings: "50%",
       description: "Advanced features for professional websites",
       features: [
-        "Unlimited Website",
-        "100 GB Storage",
+        "25 Websites",
+        "100 GB SSD Storage",
         "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+        "Free SSL Certificate",
+        "Premium Support",
+        "Daily Backups",
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: false,
     },
     {
       name: "Enterprise",
-      price: "2,199",
-      originalPrice: "4,398",
+      price: "589",
+      originalPrice: "1,178",
       savings: "50%",
       description: "Maximum performance for high-traffic sites",
       features: [
-        "Unlimited Website",
-        "200 GB Storage",
+        "Unlimited Websites",
+        "200 GB SSD Storage",
         "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+        "Free SSL Certificate",
+        "Dedicated Support",
+        "Advanced Analytics",
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: false,
     },
   ];
@@ -99,7 +91,7 @@ const RHPlans = () => {
         >
           <h2 className="text-2xl sm:text-[40px] font-bold text-[#0e3c47] mb-5">
             Choose Your Perfect
-            <span className="text-blue-600"> Shared Hosting Plan</span>
+            <span className="text-blue-600"> Proxy Server Plans </span>
           </h2>
           <p className="text-sm text-[#0e3c47cc] max-w-3xl mx-auto leading-relaxed">
             Get started with complete confidence. Our 30-day money-back
@@ -266,4 +258,4 @@ const RHPlans = () => {
   );
 };
 
-export default RHPlans;
+export default ProxyPlans;

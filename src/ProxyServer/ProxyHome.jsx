@@ -1,12 +1,12 @@
 import React from "react";
 import { Cloud, Download, Upload, Server, ArrowRight } from "lucide-react";
-import PHImg from "../assets/pyh011.png";
-import PHPlans from "./PHPlans";
-import PHFeatures from "./PHFeatures";
-import Clients from "../components/Clients";
+import ProxyPlans from "./ProxyPlans";
+import ProxyFeatures from "./ProxyFeaturs";
 import FAQsection from "../components/FAQsection";
+import Clients from "../components/Clients";
 
-const PythonHostingPage = () => {
+
+const ProxyHome = () => {
   return (
     <>
       <div className="min-h-[65vh] bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] relative overflow-hidden">
@@ -20,25 +20,22 @@ const PythonHostingPage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="container mx-auto px-4 py-4 lg:py-6 relative z-10">
+        <div className="container mx-auto px-4 py-4 lg:py-14 relative z-10">
           <div className="grid lg:grid-cols-2 gap-6 items-center">
             {/* Left Side - Main Content */}
             <div className="text-center lg:text-left space-y-8">
               <div className="space-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-[55px] font-bold text-[#0e3c47] leading-tight flex flex-col gap-2">
-                  Python Hosting
+                  Proxy Servers
                   <span className="relative inline-block">
-                    <span className="mt-3 bg-[#19849f] text-white px-4 py-2 rounded-lg transform -rotate-2 inline-block shadow-lg text-2xl">
+                    <span className="mt-4 bg-[#19849f] text-white px-4 py-2 rounded-lg transform -rotate-2 inline-block shadow-lg text-2xl">
                       5% OFF
                     </span>
                   </span>
                 </h1>
 
                 <p className="text-sm md:text-base text-[#0e3c47d5] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                  We offer the best hosting solutions for your needs, catering
-                  to clients from personal to corporate. Our data centers are
-                  strategically located worldwide to ensure that your website is
-                  always up. Happy hosting!
+                  Anonymous proxy servers. HTTP & SOCKS5 proxy servers. Build your proxy server list today!
                 </p>
               </div>
 
@@ -92,7 +89,7 @@ const PythonHostingPage = () => {
               {/* Main Cloud Server Icon */}
               <div className="relative bottom-[0px]">
                 {/* Background Circle */}
-                <img className="animate-float w-[600px]" src={PHImg} alt="" />
+                <img className="animate-float w-[700px]" src="https://wapi.piaproxy.com/static/index/img/new_header/chart3.png" alt="" />
 
                 {/* Floating Elements */}
                 <div className="absolute top-9 -left-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float">
@@ -148,8 +145,9 @@ const PythonHostingPage = () => {
           }
         `}</style>
       </div>
-      <PHPlans />
-      <PHFeatures />
+      <ProxyFeatures/>
+     <ProxyPlans/>
+     
       <FAQsection />
 
       <div className=" mt-20">
@@ -159,4 +157,4 @@ const PythonHostingPage = () => {
   );
 };
 
-export default PythonHostingPage;
+export default ProxyHome;

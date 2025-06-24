@@ -51,9 +51,12 @@ const SecNav = () => {
           <div className="flex items-center h-11">
             {/* Logo */}
             <div className="flex-shrink-0">
+              <Link to={"/"}>
               <div className="flex items-center w-[180px] pt-1 relative right-[8px]">
                 <img src={DCKNav} alt="Logo" />
               </div>
+              </Link>
+              
             </div>
 
             {/* Desktop Menu */}

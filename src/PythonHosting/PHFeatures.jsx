@@ -41,8 +41,9 @@ export default function PHFeatures() {
       <div className="max-w-7xl mx-auto px-8 sm:px-12">
         {/* Section Header */}
         <div className="text-center mb-12 ">
-          <h2 className="text-2xl md:text-4xl font-bold text-[#0e3c47] mb-4">
-            Python Server Hosting Features
+          <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4">
+            Python Server Hosting 
+            <span className="text-[#0e3c47]"> Features</span>
           </h2>
           <p className="text-[18px] text-[#0e3c47ca] max-w-2xl mx-auto">
             Everything you need to deploy and scale your Python applications with confidence, backed by enterprise-grade infrastructure.

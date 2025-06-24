@@ -67,8 +67,10 @@ export default function Offers() {
   ];
 
   return (
-    <div  id="offers" className="max-w-full min-h-screen bg-white-to-br from-orange-100 via-orange-50 to-orange-200 mt-10">
-
+    <div
+      id="offers"
+      className="max-w-full min-h-screen bg-white-to-br from-orange-100 via-orange-50 to-orange-200 mt-10"
+    >
       {/* Hero Section */}
       <div className="max-w-[1500px] mx-auto py-16">
         <div className="text-center mb-12">
@@ -78,7 +80,6 @@ export default function Offers() {
           <h2 className="text-[#0e3c47c3] mb-14 text-base">
             Cheap and best Server Hosting provider in India
           </h2>
-
         </div>
 
         {/* Pricing Cards */}
@@ -142,14 +143,14 @@ export default function Offers() {
 
               <div className="px-4">
                 <button
-                className={`w-full mt-5 py-2 px-3 rounded-lg font-medium transition-transform duration-300 ease-in-out transform text-sm ${
-                  plan.buttonStyle === "primary"
-                    ? "border border-gray-800 text-black hover:scale-105"
-                    : "border border-gray-300 text-gray-900 hover:bg-gray-50 hover:scale-105"
-                }`}
-              >
-                COMPARE PLANS
-              </button>
+                  className={`w-full mt-5 py-2 px-3 rounded-lg font-medium transition-transform duration-300 ease-in-out transform text-sm ${
+                    plan.buttonStyle === "primary"
+                      ? "border border-gray-800 text-black hover:scale-105"
+                      : "border border-gray-300 text-gray-900 hover:bg-gray-50 hover:scale-105"
+                  }`}
+                >
+                  COMPARE PLANS
+                </button>
               </div>
             </div>
           ))}

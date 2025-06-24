@@ -10,15 +10,19 @@ import SharedHostingpage from "./Products/SharedHostingpage";
 import ResellerHostingPage from "./ResellerHosting/ResellerHosting";
 import PythonHostingPage from "./PythonHosting/PythonHosting";
 import ForexHosting from "./ForexHosting/ForexHosting";
-import ContactBtn from "./components/ContactBtn";
 import BulkMail from "./BulkMail/BulkMail";
+import M365 from "./Microsoft/M365";
+import LicenseHome from "./License/LicenseHome";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import GoogleHome from "./GoogleW/GoogleHome";
+import ProxyHome from "./ProxyServer/ProxyHome";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Navbar />
-        <ContactBtn />
         <SecNav />
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -28,13 +32,13 @@ const App = () => {
           <Route path="/reseller-hosting" element={<ResellerHostingPage />} />
           <Route path="/python-hosting" element={<PythonHostingPage />} />
           <Route path="/forex-servers" element={<ForexHosting />} />
-          {/* <Route path="/proxy-servers" element={<ProxyServers />} /> */}
+          <Route path="/proxy-servers" element={<ProxyHome />} />
           <Route path="bulk-email" element={<BulkMail />} />
-          {/* <Route path="/google-workspace" element={<GoogleWorkspace />} /> */}
-          {/* <Route path="/microsoft-365" element={<Microsoft365 />} /> */}
-          {/* <Route path="/license" element={<License />} /> */}
-          {/* <Route path="/about-us" element={<AboutUs />} /> */}
-          
+          <Route path="/google-workspace" element={<GoogleHome />} />
+          <Route path="/microsoft-365" element={<M365 />} />
+          <Route path="/license" element={<LicenseHome />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/Contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>

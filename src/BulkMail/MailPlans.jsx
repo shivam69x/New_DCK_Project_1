@@ -12,70 +12,75 @@ const MailPlans = () => {
   const plans = [
     {
       name: "Basic",
-      price: "180",
-      originalPrice: "360",
+      price: "6,999",
+      originalPrice: "13,998",
       savings: "50%",
       description: "Perfect for personal websites and blogs",
       features: [
-        "1 Website",
-        "10 GB SSD Storage",
-        "100 GB Bandwidth",
-        "Free SSL Certificate",
-        "24/7 Support",
-        "1-Click WordPress Install"
+        "4 CPU Core",
+        "8 GB RAM",
+        "500 GDD",
+        "5 TB Bandwidth",
+        "5 IP Address",
+        "99.9% Uptime Guarantee",
+        "FREE Set Up!",
       ],
-      ctaText: "Get Started",
+      ctaText: "Buy Now",
       popular: false
     },
     {
       name: "Professional",
-      price: "269",
-      originalPrice: "538",
+      price: "7,999",
+      originalPrice: "15,998",
       savings: "50%",
       description: "Ideal for growing businesses and portfolios",
       features: [
-        "5 Websites",
-        "50 GB SSD Storage",
-        "Unlimited Bandwidth",
-        "Free SSL Certificate",
-        "Priority Support",
-        "Advanced Security Features"
+        "8 CPU Core / 8 Threads",
+        "16 GB RAM",
+        "2 TB SATA",
+        "5 TB Bandwidth",
+        "5 IP Address",
+        "99.9% Uptime Guarantee",
+        "FREE Set Up!",
       ],
-      ctaText: "Get Started",
+      ctaText: "Buy Now",
       popular: true
     },
     {
       name: "Business",
-      price: "389",
-      originalPrice: "778",
+      price: "8,499",
+      originalPrice: "16,998",
       savings: "50%",
       description: "Advanced features for professional websites",
       features: [
-        "25 Websites",
-        "100 GB SSD Storage",
-        "Unlimited Bandwidth",
-        "Free SSL Certificate",
-        "Premium Support",
-        "Daily Backups"
+       "8 CPU Core / 8 Threads",
+        "16 GB RAM",
+        "120GB NVme + 2TB ",
+        "5 TB Bandwidth",
+        "5 IP Address",
+        "99.9% Uptime Guarantee",
+        "FREE Set Up!",
       ],
-      ctaText: "Get Started",
+      ctaText: "Buy Now",
       popular: false
     },
     {
       name: "Enterprise",
-      price: "589",
-      originalPrice: "1,178",
+      price: "11,000",
+      originalPrice: "22,000",
       savings: "50%",
       description: "Maximum performance for high-traffic sites",
       features: [
-        "Unlimited Websites",
-        "200 GB SSD Storage",
-        "Unlimited Bandwidth",
-        "Free SSL Certificate",
-        "Dedicated Support",
-        "Advanced Analytics"
+        "8 CPU Core / 8 Threads",
+        "16 GB RAM",
+        "500 GB HDD",
+        "24(256) IP Addresses ",
+        "5 TB Bandwidth",
+        "5 IP Address",
+        "99.9% Uptime Guarantee",
+        "FREE Set Up!",
       ],
-      ctaText: "Get Started",
+      ctaText: "Buy Now",
       popular: false
     }
   ];
@@ -87,10 +92,10 @@ const MailPlans = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-2xl sm:text-[40px] font-bold text-[#0e3c47] mb-5">
             Choose Your Perfect
-            <span className="text-blue-600"> Shared Hosting Plan</span>
+            <span className="text-blue-600"> Email Marketing Plan </span>
           </h2>
           <p className="text-sm text-[#0e3c47cc] max-w-3xl mx-auto leading-relaxed">
-            Get started with complete confidence. Our 30-day money-back guarantee means it's risk-free.
+            Get started with complete confidence.
           </p>
         </div>
 

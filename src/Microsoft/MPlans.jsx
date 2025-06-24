@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Check, Star } from "lucide-react";
 
-const RHPlans = () => {
+const MPlans = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -12,78 +12,68 @@ const RHPlans = () => {
   const plans = [
     {
       name: "Basic",
-      price: "799",
-      originalPrice: "1,598",
+      price: "510",
+      originalPrice: "1,020",
       savings: "50%",
-      description: "Perfect for personal websites and blogs",
+      description: "Start with web and mobile apps",
       features: [
-        "Unlimited Website",
-        "25 GB Storage",
-        "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+        "Web and mobile versions of Word, Excel, PowerPoint, and Outlook",
+        "Chat, call, meet up to 300 attendees",
+        "1 TB of cloud storage per user",
+        "Business-class email",
+        "Manage customer appointments",
+        "Anytime phone and web support",
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: false,
     },
     {
-      name: "Professional",
-      price: "1,299",
-      originalPrice: "2,598",
+      name: "STANDARD",
+      price: "1,062.5",
+      originalPrice: "2,125",
       savings: "50%",
-      description: "Ideal for growing businesses and portfolios",
+      description: "Everything in Business Basic, plus",
       features: [
-       "Unlimited Website",
-        "50 GB Storage",
-        "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+        "Desktop versions of Word, Excel, PowerPoint, and Outlook",
+        "Easily host webinars",
+        "Attendee registration and reporting tools",
+        "Security and management controls",
+        "Tools to create personalized documents and professional layouts",
+        
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: true,
     },
     {
-      name: "Business",
-      price: "1,599",
-      originalPrice: "3,198",
+      name: "APPS",
+      price: "701",
+      originalPrice: "1,402",
       savings: "50%",
-      description: "Advanced features for professional websites",
+      description: "Excludes chat, meeting, calling",
       features: [
-        "Unlimited Website",
-        "100 GB Storage",
-        "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+        "Desktop versions of Word, Excel, PowerPoint, and Outlook",
+        "1 TB of cloud storage per user",
+        "Anytime phone and web support",
+        "Security and management controls",
+        "Advanced security",
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: false,
     },
     {
-      name: "Enterprise",
-      price: "2,199",
-      originalPrice: "4,398",
+      name: "PREMIUM",
+      price: "1,683",
+      originalPrice: "3,366",
       savings: "50%",
-      description: "Maximum performance for high-traffic sites",
+      description: "Maximum performance, Everything in Business Standard, plus",
       features: [
-        "Unlimited Website",
-        "200 GB Storage",
-        "Unlimited Bandwidth",
-        "Unlimited Plesk Accounts",
-        "Unlimited Email Accounts",
-        "Unlimited Sub Domains",
-        "Unlimited Mysql Database",
-        "99.9% Uptime Guarantee",
+          "Advanced security",
+        "Access and data control",
+        "30 GB storage per user",
+        "Cyberthreat protection",
+        "Security and management controls",
       ],
-      ctaText: "Buy Now",
+      ctaText: "Get Started",
       popular: false,
     },
   ];
@@ -97,9 +87,12 @@ const RHPlans = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-2xl sm:text-[40px] font-bold text-[#0e3c47] mb-5">
+            <div className="flex items-center flex-col ">
+                <img className="" src="https://img1.wsimg.com/cdnassets/transform/623d120b-02f8-4d4f-8328-9568755ca7ec/MS365-Family" alt="" />
+            </div>
+          <h2 className="text-2xl sm:text-[40px] font-bold text-[#0e3c47] mb-5 items-center ">
             Choose Your Perfect
-            <span className="text-blue-600"> Shared Hosting Plan</span>
+            <span className="text-blue-600 "> Microsoft 365 Plan</span>
           </h2>
           <p className="text-sm text-[#0e3c47cc] max-w-3xl mx-auto leading-relaxed">
             Get started with complete confidence. Our 30-day money-back
@@ -207,7 +200,7 @@ const RHPlans = () => {
         >
           <div className="bg-white/90 border  backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-xl font-bold text-gray-900 mb-11">
-              Best Hosting Features
+              Best Features
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
@@ -266,4 +259,4 @@ const RHPlans = () => {
   );
 };
 
-export default RHPlans;
+export default MPlans;

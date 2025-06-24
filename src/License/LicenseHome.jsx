@@ -1,10 +1,9 @@
 import React from "react";
 import { Cloud, Download, Upload, Server, ArrowRight } from "lucide-react";
-import PHImg from "../assets/pyh011.png";
-import PHPlans from "./PHPlans";
-import PHFeatures from "./PHFeatures";
-import Clients from "../components/Clients";
+import Limg from "../assets/linux01.png"
+import LPlans from "../License/LPlans"
 import FAQsection from "../components/FAQsection";
+import Clients from "../components/Clients";
 
 const PythonHostingPage = () => {
   return (
@@ -25,20 +24,13 @@ const PythonHostingPage = () => {
             {/* Left Side - Main Content */}
             <div className="text-center lg:text-left space-y-8">
               <div className="space-y-4">
-                <h1 className="text-2xl md:text-3xl lg:text-[55px] font-bold text-[#0e3c47] leading-tight flex flex-col gap-2">
-                  Python Hosting
-                  <span className="relative inline-block">
-                    <span className="mt-3 bg-[#19849f] text-white px-4 py-2 rounded-lg transform -rotate-2 inline-block shadow-lg text-2xl">
-                      5% OFF
-                    </span>
-                  </span>
+                <h1 className="text-2xl md:text-3xl lg:text-[49px] font-bold text-[#0e3c47] leading-tight flex flex-col gap-2">
+                  India's Best Linux WHM cPanel Pricing At Affordable Price.
+                  <span className="text-sm md:text-xl lg:text-[35px] mt-4 text-[#185f71] mb-3 ">Linux WHM cPanel Pricing</span>
                 </h1>
 
-                <p className="text-sm md:text-base text-[#0e3c47d5] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                  We offer the best hosting solutions for your needs, catering
-                  to clients from personal to corporate. Our data centers are
-                  strategically located worldwide to ensure that your website is
-                  always up. Happy hosting!
+                <p className="text-sm md:text-base text-[#0e3c47d5] max-w-2xl mx-auto lg:mx-0 leading-relaxed ">
+                 Get India’s best Linux WHM cPanel hosting at unbeatable prices—secure, reliable, and fully managed with premium support for your business growth.
                 </p>
               </div>
 
@@ -92,18 +84,18 @@ const PythonHostingPage = () => {
               {/* Main Cloud Server Icon */}
               <div className="relative bottom-[0px]">
                 {/* Background Circle */}
-                <img className="animate-float w-[600px]" src={PHImg} alt="" />
+                <img className="animate-float w-[600px]" src={Limg} alt="" />
 
                 {/* Floating Elements */}
-                <div className="absolute top-9 -left-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float">
+                <div className="absolute top-[20px] -left-10 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float">
                   <Server className="w-6 h-6 text-slate-700" />
                 </div>
 
-                <div className="absolute bottom-6 -right-1 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-300">
+                <div className="absolute bottom-4 -right- bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-300">
                   <Cloud className="w-6 h-6 text-slate-700" />
                 </div>
 
-                <div className="absolute top-1/2 -right-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-700">
+                <div className="absolute top-1/2 -right-1 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-700">
                   <Download className="w-6 h-6 text-slate-700" />
                 </div>
               </div>
@@ -148,8 +140,8 @@ const PythonHostingPage = () => {
           }
         `}</style>
       </div>
-      <PHPlans />
-      <PHFeatures />
+      
+      <LPlans/>
       <FAQsection />
 
       <div className=" mt-20">

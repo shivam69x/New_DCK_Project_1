@@ -1,38 +1,38 @@
 import React from "react";
-import { Shield, Clock, Headphones, Wifi, Database, Lock } from 'lucide-react';
+import { Mail, FileText, Calendar, Video, Shield, Cloud } from 'lucide-react';
 
 
-export default function SHFeatures() {
+export default function MFeatures() {
   const features = [
     {
+      icon: <Mail className="w-10 h-10 text-green-600" />,
+      title: "Advanced Email Management",
+      description: "Professional email hosting with advanced security, spam protection, and seamless integration across all devices."
+    },
+    {
+      icon: <FileText className="w-10 h-10 text-green-600" />,
+      title: "Real-time Document Collaboration",
+      description: "Create, edit, and share documents simultaneously with your team using Word, Excel, and PowerPoint online."
+    },
+    {
+      icon: <Calendar className="w-10 h-10 text-green-600" />,
+      title: "Intelligent Calendar Scheduling",
+      description: "Smart scheduling with automated meeting coordination, room booking, and seamless calendar sharing capabilities."
+    },
+    {
+      icon: <Video className="w-10 h-10 text-green-600" />,
+      title: "HD Video Conferencing",
+      description: "Host professional meetings with crystal-clear video, screen sharing, and recording features for up to 300 participants."
+    },
+    {
       icon: <Shield className="w-10 h-10 text-green-600" />,
-      title: "Free SSL Certificate",
-      description: "Secure your website with industry-standard SSL encryption to protect visitor data and boost SEO rankings."
+      title: "Enterprise-Grade Security",
+      description: "Advanced threat protection, data encryption, and compliance tools to keep your business data safe and secure."
     },
     {
-      icon: <Clock className="w-10 h-10 text-green-600" />,
-      title: "99.9% Uptime Guarantee",
-      description: "Keep your website online with our reliable infrastructure and comprehensive uptime monitoring."
-    },
-    {
-      icon: <Headphones className="w-10 h-10 text-green-600" />,
-      title: "24/7 Customer Support",
-      description: "Get expert help anytime with our dedicated support team available via chat, email, and phone."
-    },
-    {
-      icon: <Wifi className="w-10 h-10 text-green-600" />,
-      title: "Unlimited Bandwidth",
-      description: "Handle traffic spikes without worry with our unmetered bandwidth and data transfer."
-    },
-    {
-      icon: <Database className="w-10 h-10 text-green-600" />,
-      title: "SSD Storage",
-      description: "Experience faster loading times with high-performance solid-state drive storage technology."
-    },
-    {
-      icon: <Lock className="w-10 h-10 text-green-600" />,
-      title: "Daily Backups",
-      description: "Protect your data with automated daily backups and easy one-click restore functionality."
+      icon: <Cloud className="w-10 h-10 text-green-600" />,
+      title: "Cloud Storage & Backup",
+      description: "1TB+ of secure cloud storage per user with automatic backup, file versioning, and anywhere access to your files."
     }
   ];
 
@@ -42,8 +42,7 @@ export default function SHFeatures() {
         {/* Section Header */}
         <div className="text-center mb-12 ">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0e3c47] mb-4">
-            Powerful 
-            <span className="text-blue-600"> Shared Hosting Features</span>
+            Microsoft 365 Features
           </h2>
           <p className="text-[18px] text-[#0e3c47ca] max-w-2xl mx-auto">
             Everything you need to build and grow your website with confidence, backed by enterprise-grade infrastructure.
@@ -77,4 +76,3 @@ export default function SHFeatures() {
     </section> 
   );
 }
-
