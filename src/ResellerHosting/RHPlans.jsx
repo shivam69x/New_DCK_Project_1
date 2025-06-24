@@ -99,7 +99,7 @@ const RHPlans = () => {
         >
           <h2 className="text-2xl sm:text-[40px] font-bold text-[#0e3c47] mb-5">
             Choose Your Perfect
-            <span className="text-blue-600"> Shared Hosting Plan</span>
+            <span className="text-blue-600"> Reseller Hosting Plan</span>
           </h2>
           <p className="text-sm text-[#0e3c47cc] max-w-3xl mx-auto leading-relaxed">
             Get started with complete confidence. Our 30-day money-back

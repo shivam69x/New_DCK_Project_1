@@ -4,6 +4,7 @@ import ProxyPlans from "./ProxyPlans";
 import ProxyFeatures from "./ProxyFeaturs";
 import FAQsection from "../components/FAQsection";
 import Clients from "../components/Clients";
+import ProxyImg from "../assets/proxy011.png"
 
 
 const ProxyHome = () => {
@@ -89,7 +90,7 @@ const ProxyHome = () => {
               {/* Main Cloud Server Icon */}
               <div className="relative bottom-[0px]">
                 {/* Background Circle */}
-                <img className="animate-float w-[700px]" src="https://wapi.piaproxy.com/static/index/img/new_header/chart3.png" alt="" />
+                <img className="animate-float w-[800px]" src={ProxyImg} alt="" />
 
                 {/* Floating Elements */}
                 <div className="absolute top-9 -left-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float">
