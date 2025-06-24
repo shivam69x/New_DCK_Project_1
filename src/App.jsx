@@ -9,6 +9,12 @@ import SignUp from "./pages/SignUp";
 import SharedHostingpage from "./Products/SharedHostingpage";
 import ResellerHostingPage from "./ResellerHosting/ResellerHosting";
 import PythonHostingPage from "./PythonHosting/PythonHosting";
+import DedicatedServerindia from "./pages/DedicatedServerindia.jsx";
+import DedicatedServerforeign from "./pages/DedicatedServerforeign.jsx";
+import Vpsindia from "./pages/Vpsindia.jsx";
+import Vpsforeign from "./pages/Vpsforeign.jsx"
+import Cloudindia from "./pages/Cloudindia.jsx";
+import Cloudforeign from "./pages/Cloudforeign.jsx";
 import ForexHosting from "./ForexHosting/ForexHosting";
 import BulkMail from "./BulkMail/BulkMail";
 import M365 from "./Microsoft/M365";
@@ -31,6 +37,12 @@ const App = () => {
           <Route path="/shared-hosting" element={<SharedHostingpage />} />
           <Route path="/reseller-hosting" element={<ResellerHostingPage />} />
           <Route path="/python-hosting" element={<PythonHostingPage />} />
+          <Route path="/dedicatedserver/india" element={<DedicatedServerindia />} />
+          <Route path="/dedicatedserver/foreign" element={<DedicatedServerforeign />} />
+          <Route path="/vps/india" element={<Vpsindia />} />
+          <Route path="/vps/foreign" element={<Vpsforeign />} />
+          <Route path="/cloud/india" element={<Cloudindia />} />
+          <Route path="/cloud/foreign" element={<Cloudforeign />} />
           <Route path="/forex-servers" element={<ForexHosting />} />
           <Route path="/proxy-servers" element={<ProxyHome />} />
           <Route path="bulk-email" element={<BulkMail />} />
