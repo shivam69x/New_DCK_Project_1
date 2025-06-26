@@ -1,53 +1,174 @@
-import { useState } from 'react';
+import React, { useState } from "react";
 
 export default function Offers() {
-  const [selectedOS, setSelectedOS] = useState('linux');
+  const [selectedOS, setSelectedOS] = useState("linux");
 
   const plans = {
-    linux: {
-      shared: { price: 199, features: ['1 Website', '1 Cpanel account', '2 GB Storage', '5GB Bandwidth', '5 Email Accounts', '3 Sub Domains', '1 Mysql Database'] },
-      reseller: { price: 699, features: ['Unlimited Websites', 'Unlimited Cpanel Accounts', '25 GB Storage', 'Unlimited Bandwidth', 'Unlimited Email Accounts', 'Unlimited Sub Domains', 'Unlimited Mysql Database'] },
-      vps: { price: 999, features: ['2 CPU Cores', '2 GB RAM', '30 GB Hard Disk-SSD', '1TB Bandwidth', '1 IP Addresses', 'Free CentOS WP-Cpanel', '99.9% Uptime Guarantee'] },
-      forex: { price: 1499, features: ['2 CPU Cores', '4 GB RAM', '50 GB Hard Disk-SSD', 'Intel Core i5-3470 4 Cores', '8 GB DDR5', '1 GBPS Bandwidth', '1 IP Address', '99.9% Uptime Guarantee'] }
-    },
-    windows: {
-      shared: { price: 299, features: ['1 Website', '1 Plesk account', '3 GB Storage', '10GB Bandwidth', '10 Email Accounts', '5 Sub Domains', '1 MSSQL Database'] },
-      reseller: { price: 899, features: ['Unlimited Websites', 'Unlimited Plesk Accounts', '35 GB Storage', 'Unlimited Bandwidth', 'Unlimited Email Accounts', 'Unlimited Sub Domains', 'Unlimited MSSQL Database'] },
-      vps: { price: 1299, features: ['2 CPU Cores', '3 GB RAM', '40 GB Hard Disk-SSD', '1.5TB Bandwidth', '1 IP Addresses', 'Free Windows Server', '99.9% Uptime Guarantee'] },
-      forex: { price: 1899, features: ['4 CPU Cores', '6 GB RAM', '75 GB Hard Disk-SSD', 'Intel Core i7-4770 4 Cores', '12 GB DDR5', '1 GBPS Bandwidth', '2 IP Addresses', '99.9% Uptime Guarantee'] }
-    }
+    linux: [
+      {
+        name: "Shared Hosting",
+        subtitle: "STARTING FROM",
+        price: "199",
+        features: [
+          "1 Website",
+          "1 Cpanel account",
+          "2 GB Storage",
+          "5GB Bandwidth",
+          "5 Email Accounts",
+          "3 Sub Domains",
+          "1 Mysql Database",
+        ],
+        buttonStyle: "primary",
+      },
+      {
+        name: "Reseller Hosting",
+        subtitle: "STARTING FROM",
+        price: "699",
+        features: [
+          "Unlimited Websites",
+          "Unlimited Cpanel Accounts",
+          "25 GB Storage",
+          "Unlimited Bandwidth",
+          "Unlimited Email Accounts",
+          "Unlimited Sub Domains",
+          "Unlimited Mysql Database",
+        ],
+        buttonStyle: "primary",
+      },
+      {
+        name: "Cloud VPS",
+        subtitle: "Best for Entrepreneurs",
+        price: "999",
+        features: [
+          "2 CPU Cores",
+          "2 GB RAM",
+          "30 GB Hard Disk-SSD",
+          "1TB Bandwidth",
+          "1 IP Addresses",
+          "Free CentOS WP-Cpanel",
+          "99.9% Uptime Guarantee",
+        ],
+        buttonStyle: "primary",
+        bestValue: true,
+      },
+      {
+        name: "Forex Server",
+        subtitle: "STARTING FROM",
+        price: "1499",
+        features: [
+          "2 CPU Cores",
+          "4 GB RAM",
+          "50 GB Hard Disk-SSD",
+          "Intel Core i5-3470 4 Cores",
+          "8 GB DDR5",
+          "1 GBPS Bandwidth",
+          "1 IP Address",
+          "99.9% Uptime Guarantee",
+        ],
+        buttonStyle: "primary",
+      },
+    ],
+    windows: [
+      {
+        name: "Shared Hosting",
+        subtitle: "STARTING FROM",
+        price: "299",
+        features: [
+          "1 Website",
+          "1 Plesk account",
+          "3 GB Storage",
+          "10GB Bandwidth",
+          "10 Email Accounts",
+          "5 Sub Domains",
+          "1 MSSQL Database",
+        ],
+        buttonStyle: "primary",
+      },
+      {
+        name: "Reseller Hosting",
+        subtitle: "STARTING FROM",
+        price: "899",
+        features: [
+          "Unlimited Websites",
+          "Unlimited Plesk Accounts",
+          "35 GB Storage",
+          "Unlimited Bandwidth",
+          "Unlimited Email Accounts",
+          "Unlimited Sub Domains",
+          "Unlimited MSSQL Database",
+        ],
+        buttonStyle: "primary",
+      },
+      {
+        name: "Cloud VPS",
+        subtitle: "Best for Entrepreneurs",
+        price: "1299",
+        features: [
+          "2 CPU Cores",
+          "3 GB RAM",
+          "40 GB Hard Disk-SSD",
+          "1.5TB Bandwidth",
+          "1 IP Addresses",
+          "Free Windows Server",
+          "99.9% Uptime Guarantee",
+        ],
+        buttonStyle: "primary",
+        bestValue: true,
+      },
+      {
+        name: "Forex Server",
+        subtitle: "STARTING FROM",
+        price: "1899",
+        features: [
+          "4 CPU Cores",
+          "6 GB RAM",
+          "75 GB Hard Disk-SSD",
+          "Intel Core i7-4770 4 Cores",
+          "12 GB DDR5",
+          "1 GBPS Bandwidth",
+          "2 IP Addresses",
+          "99.9% Uptime Guarantee",
+        ],
+        buttonStyle: "primary",
+      },
+    ],
   };
 
-  const currentPlans = plans[selectedOS];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div
+      id="offers"
+      className="max-w-full min-h-screen bg-white-to-br from-orange-100 via-orange-50 to-orange-200 mt-10"
+    >
+      <div className="max-w-[1500px] mx-auto py-16">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Most Popular Hosting Plans</h1>
-          <p className="text-lg text-gray-600 mb-8">Cheap and best Server Hosting provider in India</p>
-          
-          {/* OS Selection Toggle */}
-          <div className="flex justify-center mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#0e3c47] mb-6">
+            Most Popular Hosting Plans
+          </h1>
+          <h2 className="text-[#0e3c47c3] mb-8 text-base">
+            Cheap and best Server Hosting provider in India
+          </h2>
+
+          {/* OS Toggle */}
+          <div className="flex justify-center">
             <div className="bg-gray-100 rounded-full p-1 shadow-lg">
               <div className="flex">
                 <button
                   onClick={() => setSelectedOS("linux")}
-                  className={`flex items-center gap-2 px-8 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedOS === "linux"
-                      ? "bg-white text-gray-700 shadow-md"
-                      : "text-gray-600 hover:text-gray-900"
+                      ? "bg-blue-600 text-white shadow"
+                      : "text-blue-700 hover:bg-blue-50"
                   }`}
                 >
                   Linux
                 </button>
                 <button
                   onClick={() => setSelectedOS("windows")}
-                  className={`flex items-center gap-2 px-8 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedOS === "windows"
-                      ? "bg-blue-500 text-white shadow-md"
-                      : "text-gray-600 hover:text-gray-900"
+                      ? "bg-blue-600 text-white shadow"
+                      : "text-blue-700 hover:bg-blue-50"
                   }`}
                 >
                   Windows
@@ -58,109 +179,77 @@ export default function Offers() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Shared Hosting */}
-          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Shared Hosting</h3>
-              <p className="text-sm text-gray-500 mb-4">STARTING FROM</p>
-              <div className="text-4xl font-bold text-gray-800">
-                ₹ {currentPlans.shared.price}<span className="text-lg text-gray-500">/mo.</span>
-              </div>
-            </div>
-            <button className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 mb-6">
-              BUY NOW
-            </button>
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-4">Key features</h4>
-              <ul className="space-y-2">
-                {currentPlans.shared.features.map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-600">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[1200px] mx-auto">
+          {plans[selectedOS].map((plan, index) => (
+            <div
+              key={index}
+              className={`relative bg-white rounded-lg shadow-lg px-3 py-5 ${
+                plan.bestValue
+                  ? "ring-4 ring-green-500 transform scale-105"
+                  : ""
+              }`}
+            >
+              {plan.bestValue && (
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium relative -top-1">
+                    Best value
+                  </div>
+                </div>
+              )}
 
-          {/* Reseller Hosting */}
-          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Reseller Hosting</h3>
-              <p className="text-sm text-gray-500 mb-4">STARTING FROM</p>
-              <div className="text-4xl font-bold text-gray-800">
-                ₹ {currentPlans.reseller.price}<span className="text-lg text-gray-500">/mo.</span>
-              </div>
-            </div>
-            <button className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 mb-6">
-              BUY NOW
-            </button>
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-4">Key features</h4>
-              <ul className="space-y-2">
-                {currentPlans.reseller.features.map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-600">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+              <div className="text-center mb-6 px-3">
+                <h3 className="text-lg font-bold text-[#0e3c47] mb-1">
+                  {plan.name}
+                </h3>
+                <p className="text-xs text-[#0e3c47de] mb-4">{plan.subtitle}</p>
 
-          {/* Cloud VPS - Best Value */}
-          <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8 relative border-2 border-green-500">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="bg-green-500 text-white px-6 py-2 rounded-full text-sm font-semibold">Best value</span>
-            </div>
-            <div className="text-center mb-6 mt-4">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Cloud VPS</h3>
-              <p className="text-sm text-green-600 font-medium mb-2">Best for Entrepreneurs</p>
-              <div className="text-4xl font-bold text-gray-800">
-                ₹ {currentPlans.vps.price}<span className="text-lg text-gray-500">/mo.</span>
-              </div>
-            </div>
-            <button className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 mb-6">
-              BUY NOW
-            </button>
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-4">Key features</h4>
-              <ul className="space-y-2">
-                {currentPlans.vps.features.map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-600">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+                <div className="mb-4">
+                  <span className="text-3xl font-bold text-[#0b2d35]">
+                    ₹ {plan.price}
+                  </span>
+                  <span className="text-[#0e3c47cb]">/mo.</span>
+                </div>
 
-          {/* Forex Server */}
-          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Forex Server</h3>
-              <p className="text-sm text-gray-500 mb-4">STARTING FROM</p>
-              <div className="text-4xl font-bold text-gray-800">
-                ₹ {currentPlans.forex.price}<span className="text-lg text-gray-500">/mo.</span>
+                <button
+                  className={`w-full py-3 rounded-md font-medium text-sm transition-transform duration-300 ease-in-out transform ${
+                    plan.buttonStyle === "primary"
+                      ? "bg-[#1c7389] text-white hover:bg-[#0e3c47] hover:scale-105 "
+                      : "border border-gray-300 text-gray-700 hover:bg-gray-50 hover:scale-105"
+                  }`}
+                >
+                  BUY NOW
+                </button>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-base text-[#0b2e36] mb-3">
+                  Key features
+                </h4>
+                <ul className="space-y-3 list-disc px-4">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li
+                      key={featureIndex}
+                      className="text-xs text-[16px] font-semibold text-gray-900  cursor-pointer hover:text-gray-700"
+                    >
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="px-4">
+                <button
+                  className={`w-full mt-5 py-2 px-3 rounded-lg font-medium transition-transform duration-300 ease-in-out transform text-sm ${
+                    plan.buttonStyle === "primary"
+                      ? "border border-gray-800 text-black hover:scale-105"
+                      : "border border-gray-300 text-gray-900 hover:bg-gray-50 hover:scale-105"
+                  }`}
+                >
+                  COMPARE PLANS
+                </button>
               </div>
             </div>
-            <button className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 mb-6">
-              BUY NOW
-            </button>
-            <div>
-              <h4 className="font-semibold text-gray-800 mb-4">Key features</h4>
-              <ul className="space-y-2">
-                {currentPlans.forex.features.map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-600">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

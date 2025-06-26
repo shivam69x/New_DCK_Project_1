@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, ShoppingCart, User } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -22,17 +22,70 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div id="home">
+    <div className=" ">
       {/* Top Navigation Bar */}
-      <nav className="navbar-container sticky top-0 z-40 bg-white border-b border-gray-200">
-        <div className="max-w-[2100px] mx-auto px- sm:px-6 lg:px-16">
-          <div className="flex justify-between items-center h-7">
-
+      <nav className="navbar-container sticky top-0 z-30 bg-white border-b border-gray-200 ">
+        <div className="max-w-[2800px] mx-auto lg:pr-[18px] px-4 sm:px-6 lg:px-[140px]">
+          <div className="flex justify-between items-center h-[40px]">
+            {/* Logo */}
 
             {/* Right Side - Desktop */}
-            <div className="hidden lg:flex items-center space-x-[650px]">
-              <div className="relative group flex items-center gap-9">
-                <span className="flex items-center text-gray-900 hover:text-gray-950 text-xs font-medium transition-colors duration-200">
+            <div className="ml-[725px] hidden lg:flex items-center justify-between space-x-[100px]">
+              <div className="relative group flex items-center justify-center gap-8 ">
+                {/* Login Button / signUp Button*/}
+
+                <div className="flex gap-3">
+
+                  <Link to={"/signup"}>
+                  <button className="flex items-center px-2  text-[16px] font-medium py-[2px]  text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
+                    {/* <User size={14} className="mr-2" /> */}
+                    <svg
+                      class="w-[18px] h-[18px] text-gray-800 dark:text-blue-700 mr-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"
+                      />
+                    </svg>
+                    Sign Up
+                  </button>
+                  </Link>
+
+                  <Link to={"/login"}>
+                    <button className="flex items-center px-2  text-[16px] font-medium py-[2px] text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
+                      {/* <User size={14} className="mr-2" /> */}
+                      <svg
+                        class="w-[18px] h-[18px] text-gray-800 dark:text-blue-700 mr-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          d="M10 14v3m4-6V7a3 3 0 1 1 6 0v4M5 11h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"
+                        />
+                      </svg>
+                      Login
+                    </button>
+                  </Link>
+                </div>
+
+                <span className="pl-[0px] flex items-center  text-gray-900 hover:text-gray-950 text-xs font-medium transition-colors duration-200 pr-[0px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -50,7 +103,7 @@ const Navbar = () => {
                   info@dckeepers.com
                 </span>
 
-                <span className="flex items-center text-gray-900 hover:text-gray-950 text-xs font-medium transition-colors duration-200">
+                <span className="flex items-center text-gray-900 hover:text-gray-950 text-xs font-medium transition-colors duration-200 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -67,23 +120,6 @@ const Navbar = () => {
                   </svg>
                   +91 9119359554
                 </span>
-              </div>
-
-              {/* Login Button / signUp Button*/}
-
-              <div className="flex gap-3">
-                <Link to={"/login"}>
-                  <button className="flex items-center px-2  text-[14px] font-medium py-[2px] text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
-                    <User size={14} className="mr-2" />
-                    Login
-                  </button>
-                </Link>
-                <Link to={"/createaccount"}>
-                  <button className="flex items-center px-2  text-[14px] font-medium py-[2px]  text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50 hover:border-blue-600 transition-colors duration-200">
-                  <User size={14} className="mr-2" />
-                  Sign Up
-                </button>
-                </Link>                
               </div>
             </div>
 
@@ -116,6 +152,11 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Secondary Navigation Bar */}
+      <div className="sticky z-50 top-0">{/* <SecNav /> */}</div>
+
+      {/* Demo Content */}
     </div>
   );
 };

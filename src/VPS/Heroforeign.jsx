@@ -1,12 +1,9 @@
 import React from 'react';
 import Hero13 from "../assets/8.png";
+import { ArrowRight } from "lucide-react";
 
 
 export default function Heroforeign() {
-  // Function to handle smooth scroll to pricing table
-  const Items = [
-    { name: "See All Plans", targetId: "plan" },
-  ];
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
@@ -17,7 +14,7 @@ export default function Heroforeign() {
 
   return (
     <section
-      className="relative bg-white from-[#dff6fd] to-[#f7fafe] h-[60vh] min-h-[440px] overflow-hidden"
+      className="relativebg-gradient-to-br from-[#dff6fd] to-[#f7fafe] h-[90vh] min-h-[440px] overflow-hidden"
     >
       <div className="container mx-auto px-6  h-full relative">
         {/* Carousel Container */}
@@ -27,25 +24,21 @@ export default function Heroforeign() {
               {/* Left Side - Text Content */}
               <div className="flex flex-col justify-center space-y-7  order-1 lg:order-1">
                 <h1 className="text-lg lg:text-2xl xl:text-4xl font-bold leading-tight text-[#0a2540]">
-                  VPS Hosting
+                  VPS Hosting - Foreign
                 </h1>
                 <p className="text-sm lg:text-lg leading-relaxed text-[#3b3f5c] max-w-lg">
                   Uplift your digital landscape with our top-tier foreign VPS solutions, crafted to deliver speed and reliability across international markets – now with a special 20% discount on yearly commitments.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  {Items.map((item, index) => (
-                    <button
-                     key={index}
-                     onClick={() => handleScroll(item.targetId)}
-                     className="group relative px-8 py-4 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <span className="relative flex items-center gap-2">
-                        {item.name}
-                      </span>
-                    </button>
-                 ))}
-                </div>
+              {/* CTA Buttons */}
+              <div className="pt-0">
+                <button
+                  className="group bg-[#126276] hover:bg-[#218aa4] text-white font-semibold px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg inline-flex items-center space-x-2 text-base"
+                  aria-label="View all hosting plans"
+                >
+                  <span>See All Plans</span>
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </div>
               </div>
               {/* Right Side - Image */}
               <div className="flex justify-center lg:justify-end items-center order-2 lg:order-2 animate-gentle-bounce">

@@ -57,12 +57,12 @@ export default function FAQsection() {
             return (
               <div
                 key={index}
-                className={`accordion border border-solid border-gray-300 p-4 rounded-xl mb-8 lg:p-4 transition duration-500 ${
+                className={`accordion border border-solid border-gray-300 p-4  rounded-xl mb-8 lg:p-4 transition duration-500 ${
                   isOpen ? "bg-indigo-50 border-indigo-600" : ""
                 }`}
               >
                 <button
-                  className={`accordion-toggle group inline-flex items-center justify-between text-left text-lg font-semibold leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 ${
+                  className={`px-6 accordion-toggle group inline-flex items-center justify-between text-left text-lg font-semibold leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 ${
                     isOpen ? "font-medium text-indigo-600" : ""
                   }`}
                   onClick={() => toggleAccordion(index)}

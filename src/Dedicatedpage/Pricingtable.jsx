@@ -117,7 +117,7 @@ const PricingTable = () => {
   ];
 
   return (
-    <div id="india" className="min-h-screen bg-white from-slate-50 to-blue-50 m-2 mb-0">
+    <div id="india" className="min-h-screen  bg-gradient-to-br from-[#dff6fd] to-[#f7fafe]  m-2 mb-0">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center text-blue-600 mb-4">
@@ -132,7 +132,7 @@ const PricingTable = () => {
         {/* Table without scroll */}
         <div>
           {/* Table Header */}
-          <div className="bg-teal-600  text-white  rounded-t-lg">
+          <div className="bg-sky-900  text-white  rounded-t-lg">
             <div className="grid grid-cols-8 gap-10 p-4 font-semibold text-sm lg:text-base">
               <div className="flex items-center">Dedicated Processors</div>
               <div className="flex items-center pl-4">Clock Speed</div>
@@ -169,7 +169,7 @@ const PricingTable = () => {
                   ₹{server.price.toLocaleString()}
                 </div>
                 <div className="text-center">
-                  <button className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md transition-colors text-sm font-medium whitespace-nowrap">
+                  <button className="bg-sky-900 hover:bg-teal-600 text-white px-4 py-2 rounded-md transition-colors text-sm font-medium whitespace-nowrap">
                     Configure Now
                   </button>
                 </div>

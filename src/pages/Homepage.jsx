@@ -31,8 +31,9 @@ const Homepage = () => {
           <Whyus />
           <Aim />
 
-          <FAQsection />
+          
         </div>
+        <FAQsection />
         <div className="mt-20">
           <Clients />
         </div>

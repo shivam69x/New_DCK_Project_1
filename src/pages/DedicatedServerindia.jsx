@@ -7,7 +7,7 @@ import Clients from '../components/Clients';
 
 const DedicatedServerindia = () => {
   return (
-    <div>
+    <div className=' bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] '>
       <Dedicatedhero />
       <Pricingtable />
       <Pricingindia />

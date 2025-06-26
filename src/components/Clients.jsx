@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-// import ClintImg from "../assets/clint2.jpg"
-import ClintImg2 from "../assets/crs01.png";
+// import ClintImg from "../assets/clint2.png"
+import ClintImg2 from "../assets/cr001.png";
 
 const testimonials = [
   {

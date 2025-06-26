@@ -7,7 +7,7 @@ import Pricingforeign from '../Dedicatedpage/pricingforeign';
 
 const DedicatedServerforeign = () => {
   return (
-        <div>
+        <div className=' bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] '>
             <Dedicatedforeignhero />
             <Pricingforeigntable />
             <Pricingforeign />
@@ -22,4 +22,3 @@ const DedicatedServerforeign = () => {
 }
 
 export default DedicatedServerforeign;
-
