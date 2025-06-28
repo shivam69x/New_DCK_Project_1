@@ -91,7 +91,7 @@ const M365 = () => {
             {/* Right Side - Visual */}
             <div className="relative flex justify-center lg:justify-center sm:bottom-[20px] bottom-[110px] ">
               {/* Main Cloud Server Icon */}
-              <div className="relative bottom-[0px]">
+              <div className="relative lg:bottom-[0px] -bottom-[110px]">
                 {/* Background Circle */}
                 <img
                   className="animate-float w-[600px]"

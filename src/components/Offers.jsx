@@ -137,15 +137,15 @@ export default function Offers() {
   return (
     <div
       id="offers"
-      className="max-w-full min-h-screen bg-white-to-br from-orange-100 via-orange-50 to-orange-200 mt-10"
+      className="w-full min-h-screen bg-white-to-br from-orange-100 via-orange-50 to-orange-200 mt-10"
     >
-      <div className="max-w-[1500px] mx-auto py-16">
+      <div className="max-w-[1500px] mx-auto py-12 px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-2xl md:text-4xl font-bold text-[#0e3c47] mb-6">
             Most Popular Hosting Plans
           </h1>
-          <h2 className="text-[#0e3c47c3] mb-8 text-base">
+          <h2 className="text-[#0e3c47c3] mb-8 text-sm sm:text-base">
             Cheap and best Server Hosting provider in India
           </h2>
 
@@ -155,7 +155,7 @@ export default function Offers() {
               <div className="flex">
                 <button
                   onClick={() => setSelectedOS("linux")}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedOS === "linux"
                       ? "bg-blue-600 text-white shadow"
                       : "text-blue-700 hover:bg-blue-50"
@@ -165,7 +165,7 @@ export default function Offers() {
                 </button>
                 <button
                   onClick={() => setSelectedOS("windows")}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedOS === "windows"
                       ? "bg-blue-600 text-white shadow"
                       : "text-blue-700 hover:bg-blue-50"
@@ -179,13 +179,13 @@ export default function Offers() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1500px] mx-auto px-4">
           {plans[selectedOS].map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-lg shadow-lg px-3 py-5 ${
+              className={`relative bg-white rounded-lg shadow-lg px-4 py-6 sm:px-6 sm:py-8 flex flex-col justify-between ${
                 plan.bestValue
-                  ? "ring-4 ring-green-500 transform scale-105"
+                  ? "ring-4 ring-green-500 transform scale-[1.02]"
                   : ""
               }`}
             >
@@ -197,49 +197,53 @@ export default function Offers() {
                 </div>
               )}
 
-              <div className="text-center mb-6 px-3">
-                <h3 className="text-lg font-bold text-[#0e3c47] mb-1">
-                  {plan.name}
-                </h3>
-                <p className="text-xs text-[#0e3c47de] mb-4">{plan.subtitle}</p>
+              <div className="flex-grow">
+                <div className="text-center mb-6 px-2">
+                  <h3 className="text-lg font-bold text-[#0e3c47] mb-1">
+                    {plan.name}
+                  </h3>
+                  <p className="text-xs text-[#0e3c47de] mb-4">
+                    {plan.subtitle}
+                  </p>
 
-                <div className="mb-4">
-                  <span className="text-3xl font-bold text-[#0b2d35]">
-                    ₹ {plan.price}
-                  </span>
-                  <span className="text-[#0e3c47cb]">/mo.</span>
+                  <div className="mb-4">
+                    <span className="text-3xl font-bold text-[#0b2d35]">
+                      ₹ {plan.price}
+                    </span>
+                    <span className="text-[#0e3c47cb]">/mo.</span>
+                  </div>
+
+                  <button
+                    className={`w-full py-3 rounded-md font-medium text-sm transition-transform duration-300 ease-in-out transform ${
+                      plan.buttonStyle === "primary"
+                        ? "bg-[#1c7389] text-white hover:bg-[#0e3c47] hover:scale-105 "
+                        : "border border-gray-300 text-gray-700 hover:bg-gray-50 hover:scale-105"
+                    }`}
+                  >
+                    BUY NOW
+                  </button>
                 </div>
 
-                <button
-                  className={`w-full py-3 rounded-md font-medium text-sm transition-transform duration-300 ease-in-out transform ${
-                    plan.buttonStyle === "primary"
-                      ? "bg-[#1c7389] text-white hover:bg-[#0e3c47] hover:scale-105 "
-                      : "border border-gray-300 text-gray-700 hover:bg-gray-50 hover:scale-105"
-                  }`}
-                >
-                  BUY NOW
-                </button>
+                <div>
+                  <h4 className="font-bold text-base text-[#0b2e36] mb-3">
+                    Key features
+                  </h4>
+                  <ul className="space-y-3 list-disc px-4">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="text-sm font-semibold text-gray-900 cursor-pointer hover:text-gray-700"
+                      >
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div>
-                <h4 className="font-bold text-base text-[#0b2e36] mb-3">
-                  Key features
-                </h4>
-                <ul className="space-y-3 list-disc px-4">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="text-xs text-[16px] font-semibold text-gray-900  cursor-pointer hover:text-gray-700"
-                    >
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="px-4">
+              <div className="px-4 mt-6">
                 <button
-                  className={`w-full mt-5 py-2 px-3 rounded-lg font-medium transition-transform duration-300 ease-in-out transform text-sm ${
+                  className={`w-full py-2 px-3 rounded-lg font-medium transition-transform duration-300 ease-in-out transform text-sm ${
                     plan.buttonStyle === "primary"
                       ? "border border-gray-800 text-black hover:scale-105"
                       : "border border-gray-300 text-gray-900 hover:bg-gray-50 hover:scale-105"

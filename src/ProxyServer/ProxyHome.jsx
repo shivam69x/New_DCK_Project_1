@@ -4,8 +4,7 @@ import ProxyPlans from "./ProxyPlans";
 import ProxyFeatures from "./ProxyFeaturs";
 import FAQsection from "../components/FAQsection";
 import Clients from "../components/Clients";
-import ProxyImg from "../assets/proxy011.png"
-
+import ProxyImg from "../assets/proxy011.png";
 
 const ProxyHome = () => {
   return (
@@ -36,42 +35,43 @@ const ProxyHome = () => {
                 </h1>
 
                 <p className="text-sm md:text-base text-[#0e3c47d5] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                  Anonymous proxy servers. HTTP & SOCKS5 proxy servers. Build your proxy server list today!
+                  Anonymous proxy servers. HTTP & SOCKS5 proxy servers. Build
+                  your proxy server list today!
                 </p>
               </div>
 
               {/* Features List */}
-               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center lg:text-left">
-                              <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
-                                <div className="flex items-center justify-center lg:justify-start mb-2">
-                                  <Server className="w-5 h-5 text-[#1c758b] mr-2" />
-                                  <span className="text-[#0e3c47] font-semibold text-[20px]">
-                                    99.9% Uptime
-                                  </span>
-                                </div>
-                                <p className="text-slate-600 text-sm">Reliable performance</p>
-                              </div>
-              
-                              <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
-                                <div className="flex items-center justify-center lg:justify-start mb-2">
-                                  <Cloud className="w-5 h-5 text-[#1c758b] mr-2" />
-                                  <span className="text-[#0e3c47] font-semibold text-[20px]">
-                                    Global CDN
-                                  </span>
-                                </div>
-                                <p className="text-slate-600 text-sm">Worldwide coverage</p>
-                              </div>
-              
-                              <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
-                                <div className="flex items-center justify-center lg:justify-start mb-2">
-                                  <Download className="w-5 h-5 text-[#1c758b] mr-2" />
-                                  <span className="text-[#0e3c47] font-semibold text-[20px]">
-                                    Fast Speed
-                                  </span>
-                                </div>
-                                <p className="text-slate-600 text-sm">Optimized delivery</p>
-                              </div>
-                            </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center lg:text-left">
+                <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
+                  <div className="flex items-center justify-center lg:justify-start mb-2">
+                    <Server className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <span className="text-[#0e3c47] font-semibold text-[20px]">
+                      99.9% Uptime
+                    </span>
+                  </div>
+                  <p className="text-slate-600 text-sm">Reliable performance</p>
+                </div>
+
+                <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
+                  <div className="flex items-center justify-center lg:justify-start mb-2">
+                    <Cloud className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <span className="text-[#0e3c47] font-semibold text-[20px]">
+                      Global CDN
+                    </span>
+                  </div>
+                  <p className="text-slate-600 text-sm">Worldwide coverage</p>
+                </div>
+
+                <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-slate-300/60">
+                  <div className="flex items-center justify-center lg:justify-start mb-2">
+                    <Download className="w-5 h-5 text-[#1c758b] mr-2" />
+                    <span className="text-[#0e3c47] font-semibold text-[20px]">
+                      Fast Speed
+                    </span>
+                  </div>
+                  <p className="text-slate-600 text-sm">Optimized delivery</p>
+                </div>
+              </div>
 
               {/* CTA Button */}
               <div className="pt-0">
@@ -86,23 +86,27 @@ const ProxyHome = () => {
             </div>
 
             {/* Right Side - Visual */}
-            <div className="relative flex justify-center lg:justify-center sm:bottom-[20px] md:bottom-[50px] bottom-[110px] ">
+            <div className="relative flex justify-center bottom-[60px] sm:bottom-[40px] md:bottom-[20px] lg:bottom-0">
               {/* Main Cloud Server Icon */}
-              <div className="relative bottom-[0px]">
+              <div className="relative">
                 {/* Background Circle */}
-                <img className="animate-float w-[800px]" src={ProxyImg} alt="" />
+                <img
+                  className="w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] animate-float"
+                  src={ProxyImg}
+                  alt="Cloud Server"
+                />
 
                 {/* Floating Elements */}
-                <div className="absolute top-9 -left-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float">
-                  <Server className="w-6 h-6 text-slate-700" />
+                <div className="absolute top-2 left-2 sm:top-4 sm:-left-3 bg-white/40 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-slate-300/50 animate-float">
+                  <Server className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700" />
                 </div>
 
-                <div className="absolute bottom-6 -right-1 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-300">
-                  <Cloud className="w-6 h-6 text-slate-700" />
+                <div className="absolute bottom-3 right-2 sm:bottom-6 sm:-right-1 bg-white/40 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-slate-300/50 animate-float delay-300">
+                  <Cloud className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700" />
                 </div>
 
-                <div className="absolute top-1/2 -right-5 bg-white/40 backdrop-blur-sm rounded-lg p-3 border border-slate-300/50 animate-float delay-700">
-                  <Download className="w-6 h-6 text-slate-700" />
+                <div className="absolute top-1/2 right-0 sm:-right-5 bg-white/40 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-slate-300/50 animate-float delay-700">
+                  <Download className="w-5 h-5 sm:w-6 sm:h-6 text-slate-700" />
                 </div>
               </div>
             </div>
@@ -146,9 +150,9 @@ const ProxyHome = () => {
           }
         `}</style>
       </div>
-      <ProxyFeatures/>
-     <ProxyPlans/>
-     
+      <ProxyFeatures />
+      <ProxyPlans />
+
       <FAQsection />
 
       <div className=" mt-20">

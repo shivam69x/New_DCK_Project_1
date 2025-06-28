@@ -12,7 +12,6 @@ import Aim from "../components/Aim";
 import FAQsection from "../components/FAQsection";
 import Clients from "../components/Clients";
 
-
 const Homepage = () => {
   return (
     <>
@@ -21,7 +20,7 @@ const Homepage = () => {
         <Faqnav />
         <DCK />
 
-        <div className="max-w-[1200px] flex justify-center flex-col mx-auto px-0 py-1 ">
+        <div className="max-w-[1400px] flex justify-center flex-col mx-auto px-0 py-1 ">
           <Midhero />
 
           <Offers />
@@ -30,8 +29,6 @@ const Homepage = () => {
           <AboutUs />
           <Whyus />
           <Aim />
-
-          
         </div>
         <FAQsection />
         <div className="mt-20">

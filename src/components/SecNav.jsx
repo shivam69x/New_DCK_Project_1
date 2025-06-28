@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const SecNav = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,12 @@ const SecNav = () => {
 
   const toggleSubDropdown = (subMenuName) => {
     setActiveSubDropdown((prev) => (prev === subMenuName ? null : subMenuName));
+  };
+
+  const closeDropdowns = () => {
+    setActiveDropdown(null);
+    setActiveSubDropdown(null);
+    setMobileMenuOpen(false);
   };
 
   const menuItems = [
@@ -71,35 +78,32 @@ const SecNav = () => {
     ],
   };
 
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
-    setActiveSubDropdown(null);
-  };
-
   return (
     <>
       <nav className="bg-cyan-100 border-b border-cyan-200 z-50 sticky top-0">
         <div className="max-w-[2800px] mx-auto px-4">
-          <div className="flex items-center h-11">
-            <Link to="/" className="flex-shrink-0 w-[180px]">
+          {/* Top bar container */}
+          <div className="flex items-center justify-between h-11">
+            {/* Logo */}
+            <Link to="/" className="w-[160px] flex-shrink-0">
               <img src={DCKNav} alt="Logo" />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-2 ml-6">
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex items-center flex-grow ml-6 space-x-2">
               {menuItems.map((item) => (
                 <div key={item.name} className="relative">
                   {item.link && !item.hasDropdown ? (
                     <Link
                       to={item.link}
-                      className="uppercase flex items-center px-2 py-2 text-[14px] font-bold text-[#075466] hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 cursor-pointer"
+                      className="uppercase flex items-center px-2 py-2 text-[14px] font-bold text-[#075466] hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200"
                     >
                       {item.name}
                     </Link>
                   ) : (
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="uppercase flex items-center px-2 py-2 text-[14px] font-bold text-[#075466] hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200 cursor-pointer"
+                      className="uppercase flex items-center px-2 py-2 text-[14px] font-bold text-[#075466] hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors duration-200"
                     >
                       {item.name}
                       <svg
@@ -120,9 +124,9 @@ const SecNav = () => {
                     </button>
                   )}
 
-                  {/* Main Dropdown */}
+                  {/* Desktop Dropdown */}
                   {item.hasDropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-[12px] w-56 bg-white rounded-md shadow-xl border z-50">
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-xl border z-50">
                       {dropdownContent[item.name]?.map((subItem, idx) => (
                         <div key={idx} className="relative">
                           {subItem.hasSubMenu ? (
@@ -134,9 +138,7 @@ const SecNav = () => {
                                 {subItem.name}
                                 <svg
                                   className={`ml-2 w-4 h-4 transition-transform ${
-                                    activeSubDropdown === subItem.name
-                                      ? "rotate-180"
-                                      : ""
+                                    activeSubDropdown === subItem.name ? "rotate-180" : ""
                                   }`}
                                   fill="none"
                                   stroke="currentColor"
@@ -183,16 +185,114 @@ const SecNav = () => {
               ))}
             </div>
 
-            {/* Currency Component */}
-            <div className="ml-auto">
+            {/* Currency Button (Desktop) */}
+            <div className="hidden lg:block ml-auto">
               <NavCurrency />
             </div>
+
+            {/* Hamburger Icon (Mobile) */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-[#075466] focus:outline-none"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={
+                      mobileMenuOpen
+                        ? "M6 18L18 6M6 6l12 12"
+                        : "M4 6h16M4 12h16M4 18h16"
+                    }
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden flex flex-col space-y-1 py-2">
+              {menuItems.map((item) => (
+                <div key={item.name} className="relative">
+                  {item.link && !item.hasDropdown ? (
+                    <Link
+                      to={item.link}
+                      className="block px-4 py-2 text-sm font-semibold text-[#075466] hover:bg-cyan-50"
+                      onClick={closeDropdowns}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="w-full text-left px-4 py-2 text-sm font-bold text-[#075466] hover:bg-cyan-50"
+                      >
+                        {item.name}
+                      </button>
+
+                      {activeDropdown === item.name && (
+                        <div className="pl-4">
+                          {dropdownContent[item.name]?.map((subItem, idx) => (
+                            <div key={idx} className="relative">
+                              {subItem.hasSubMenu ? (
+                                <>
+                                  <button
+                                    onClick={() => toggleSubDropdown(subItem.name)}
+                                    className="w-full text-left px-4 py-2 text-sm font-medium text-gray-800 hover:bg-cyan-50"
+                                  >
+                                    {subItem.name}
+                                  </button>
+                                  {activeSubDropdown === subItem.name && (
+                                    <div className="pl-4">
+                                      {subItem.subItems.map((child, i) => (
+                                        <Link
+                                          key={i}
+                                          to={child.link}
+                                          className="block px-4 py-2 text-sm text-gray-800 hover:bg-cyan-50"
+                                          onClick={closeDropdowns}
+                                        >
+                                          {child.name}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
+                                </>
+                              ) : (
+                                <Link
+                                  to={subItem.link}
+                                  className="block px-4 py-2 text-sm text-gray-800 hover:bg-cyan-50"
+                                  onClick={closeDropdowns}
+                                >
+                                  {subItem.name}
+                                </Link>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              ))}
+              <div className="px-4 pt-4">
+                <NavCurrency />
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Overlay */}
-      {activeDropdown && (
+      {(activeDropdown || mobileMenuOpen) && (
         <div className="fixed inset-0 z-40" onClick={closeDropdowns}></div>
       )}
     </>

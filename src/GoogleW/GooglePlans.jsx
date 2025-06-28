@@ -85,7 +85,7 @@ const GooglePlans = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-            <div className="flex items-center flex-col w-[550px] m-auto mb-6">
+            <div className="flex justify-center items-center flex-col w-[350px] lg:w-[550px] m-auto mb-6">
                 <img className="" src={GoogleImg} alt="google suits" />
             </div>
 

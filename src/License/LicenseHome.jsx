@@ -82,7 +82,7 @@ const PythonHostingPage = () => {
             {/* Right Side - Visual */}
             <div className="relative flex justify-center lg:justify-center sm:bottom-[20px] md:bottom-[50px] bottom-[110px] ">
               {/* Main Cloud Server Icon */}
-              <div className="relative bottom-[0px]">
+              <div className="relative lg:bottom-[0px] -bottom-[100px]">
                 {/* Background Circle */}
                 <img className="animate-float w-[600px]" src={Limg} alt="" />
 

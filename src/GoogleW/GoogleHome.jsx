@@ -93,19 +93,17 @@ const GoogleHome = () => {
       
 
       {/* Hero Section */}
-
-        
-      <div className="mb-12 flex flex-col items-center justify-top pt-6">
-        <h1 className="text-5xl font-medium text-gray-700 ">
-          <span className="text-blue-500">G</span>
-          <span className="text-red-500">o</span>
-          <span className="text-yellow-500">o</span>
-          <span className="text-blue-500">g</span>
-          <span className="text-green-500">l</span>
-          <span className="text-red-500">e</span>
-          <span className="text-gray-600 ml-2">Workspace</span>
-        </h1>
-      </div>
+<div className="mb-8 flex flex-col items-center justify-start pt-4 px-4 sm:pt-6 sm:mb-12">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-700 text-center">
+    <span className="text-blue-500">G</span>
+    <span className="text-red-500">o</span>
+    <span className="text-yellow-500">o</span>
+    <span className="text-blue-500">g</span>
+    <span className="text-green-500">l</span>
+    <span className="text-red-500">e</span>
+    <span className="text-gray-600 ml-1 sm:ml-2">Workspace</span>
+  </h1>
+</div>
       
 
       <section className="relative z-10 px-6 py-10">

@@ -91,7 +91,7 @@ const SharedHostingpage = () => {
             {/* Right Side - Visual */}
             <div className="relative flex justify-center lg:justify-center sm:bottom-[20px] md:bottom-[50px] bottom-[110px] ">
               {/* Main Cloud Server Icon */}
-              <div className="relative bottom-[0px]">
+              <div className="relative -bottom-[100px] lg:bottom-[0px]">
                 {/* Background Circle */}
                 <img className="animate-float w-[600px]" src={SHImg} alt="" />
 

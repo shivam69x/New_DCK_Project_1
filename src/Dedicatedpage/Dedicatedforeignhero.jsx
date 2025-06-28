@@ -9,27 +9,29 @@ const Dedicatedforeignhero = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
-    <section className="relative bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] h-[60vh] min-h-[500px] overflow-hidden">
-      <div className="container mx-auto px-6 h-full relative">
+    <section className="relative bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] min-h-[500px] h-auto overflow-hidden py-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full relative">
         {/* Carousel Container */}
         <div className="relative w-full h-full flex items-center">
           <div className="w-full h-full flex items-center">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 h-full items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left Side - Text Content */}
-              <div className="flex flex-col justify-center space-y-7 order-1 lg:order-1">
-                <h1 className="text-lg lg:text-2xl xl:text-4xl  font-bold leading-tight text-[#0a2540]">
+              <div className="flex flex-col justify-center space-y-5 order-2 lg:order-1 text-center lg:text-left">
+                <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-[#0a2540]">
                   Dedicated Server - Foreign
                 </h1>
-                <p className="text-sm lg:text-lg leading-relaxed text-[#3b3f5c] max-w-lg">
+                <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-[#3b3f5c] max-w-full sm:max-w-lg mx-auto lg:mx-0">
                   Expand without limits, secure your global success with our
                   top-tier dedicated servers, and seize the opportunity to save
                   20% on annual subscriptions for a limited time.
                 </p>
-                {/* CTA Buttons */}
-                <div className="pt-0">
+
+                {/* CTA Button */}
+                <div className="pt-2 flex justify-center lg:justify-start">
                   <button
-                    className="group bg-[#126276] hover:bg-[#218aa4] text-white font-semibold px-5 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg inline-flex items-center space-x-2 text-base"
+                    className="group bg-[#126276] hover:bg-[#218aa4] text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg inline-flex items-center space-x-2 text-sm sm:text-base"
                     aria-label="View all hosting plans"
                   >
                     <span>See All Plans</span>
@@ -39,11 +41,12 @@ const Dedicatedforeignhero = () => {
               </div>
 
               {/* Right Side - Image */}
-              <div className="flex justify-center lg:justify-end items-center order-2 lg:order-2 animate-gentle-bounce">
-                <div className="w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px]  ">
+              <div className="flex justify-center lg:justify-end items-center order-1 lg:order-2 animate-gentle-bounce">
+                <div className="w-full max-w-[320px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px]">
                   <img
                     src={Hero11}
-                    className="max-w-lg h-auto bg-gradient-to-br from-[#dff6fd] to-[#f7fafe] object-cover lg:pl-6 xl:pl-44 "
+                    className="w-full h-auto object-contain"
+                    alt="Dedicated Foreign"
                   />
                 </div>
               </div>

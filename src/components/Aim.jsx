@@ -73,7 +73,7 @@ import M2 from "../assets/mission2.png";
 
 const Aim = () => {
   return (
-    <section className=" m-auto max-w-[1200px] flex justify-center items-center py-0 px-6 relative xl:mr-0 lg:mr-5 mr-0 border border-slate-300 bg-white rounded-2xl mt-5 bg-gradient-to-b from-sky-100 shadow-md ">
+    <section className=" m-auto max-w-[1400px] flex justify-center items-center py-0 px-6 relative xl:mr-0 lg:mr-5 mr-0 border border-slate-300 bg-white rounded-2xl mt-5 bg-gradient-to-b from-sky-100 shadow-md ">
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
 
