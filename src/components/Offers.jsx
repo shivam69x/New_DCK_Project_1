@@ -1,7 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Offers() {
   const [selectedOS, setSelectedOS] = useState("linux");
+  const navigate = useNavigate(); 
+
+  const handleBuyNow = (plan) => {
+    navigate("/billing", { state: { plan } }); 
+  };
 
   const plans = {
     linux: [
@@ -214,9 +220,10 @@ export default function Offers() {
                   </div>
 
                   <button
+                    onClick={() => handleBuyNow(plan)}
                     className={`w-full py-3 rounded-md font-medium text-sm transition-transform duration-300 ease-in-out transform ${
                       plan.buttonStyle === "primary"
-                        ? "bg-[#1c7389] text-white hover:bg-[#0e3c47] hover:scale-105 "
+                        ? "bg-[#1c7389] text-white hover:bg-[#0e3c47] hover:scale-105"
                         : "border border-gray-300 text-gray-700 hover:bg-gray-50 hover:scale-105"
                     }`}
                   >

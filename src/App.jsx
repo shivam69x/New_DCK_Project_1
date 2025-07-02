@@ -12,7 +12,7 @@ import PythonHostingPage from "./PythonHosting/PythonHosting";
 import DedicatedServerindia from "./pages/DedicatedServerindia.jsx";
 import DedicatedServerforeign from "./pages/DedicatedServerforeign.jsx";
 import Vpsindia from "./pages/Vpsindia.jsx";
-import Vpsforeign from "./pages/Vpsforeign.jsx"
+import Vpsforeign from "./pages/Vpsforeign.jsx";
 import Cloudindia from "./pages/Cloudindia.jsx";
 import Cloudforeign from "./pages/Cloudforeign.jsx";
 import ForexHosting from "./ForexHosting/ForexHosting";
@@ -23,11 +23,15 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import GoogleHome from "./GoogleW/GoogleHome";
 import ProxyHome from "./ProxyServer/ProxyHome";
+import BillForm from "../../src/pages/BillForm.jsx";
+import ScrollToTop from "./ScrollTop.jsx";
+import Invoice from "../../src/components/InvoicePage.jsx";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <SecNav />
         <Routes>
@@ -37,8 +41,14 @@ const App = () => {
           <Route path="/shared-hosting" element={<SharedHostingpage />} />
           <Route path="/reseller-hosting" element={<ResellerHostingPage />} />
           <Route path="/python-hosting" element={<PythonHostingPage />} />
-          <Route path="/dedicatedserver/india" element={<DedicatedServerindia />} />
-          <Route path="/dedicatedserver/foreign" element={<DedicatedServerforeign />} />
+          <Route
+            path="/dedicatedserver/india"
+            element={<DedicatedServerindia />}
+          />
+          <Route
+            path="/dedicatedserver/foreign"
+            element={<DedicatedServerforeign />}
+          />
           <Route path="/vps/india" element={<Vpsindia />} />
           <Route path="/vps/foreign" element={<Vpsforeign />} />
           <Route path="/cloud/india" element={<Cloudindia />} />
@@ -51,6 +61,8 @@ const App = () => {
           <Route path="/license" element={<LicenseHome />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/Contact-us" element={<ContactUs />} />
+          <Route path="/billing" element={<BillForm />} />
+          <Route path="/invoice" element={<Invoice />} />
         </Routes>
         <Footer />
       </BrowserRouter>
