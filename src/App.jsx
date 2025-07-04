@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./ScrollTop.jsx";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,9 +24,9 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import GoogleHome from "./GoogleW/GoogleHome";
 import ProxyHome from "./ProxyServer/ProxyHome";
-import BillForm from "../../src/pages/BillForm.jsx";
-import ScrollToTop from "./ScrollTop.jsx";
-import Invoice from "../../src/components/InvoicePage.jsx";
+import BillForm from "./pages/BillForm.jsx";
+import Invoice from "./BillComponents/InvoicePage.jsx";
+
 
 const App = () => {
   return (
@@ -61,8 +62,10 @@ const App = () => {
           <Route path="/license" element={<LicenseHome />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/Contact-us" element={<ContactUs />} />
+
           <Route path="/billing" element={<BillForm />} />
           <Route path="/invoice" element={<Invoice />} />
+          
         </Routes>
         <Footer />
       </BrowserRouter>
